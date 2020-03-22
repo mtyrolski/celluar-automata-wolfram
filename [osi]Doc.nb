@@ -1,0 +1,842 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     36910,        834]
+NotebookOptionsPosition[     35625,        803]
+NotebookOutlinePosition[     36048,        820]
+CellTagsIndexPosition[     36005,        817]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Przyk\[LSlash]ady oscylator\[OAcute]w", "Title",
+ CellChangeTimes->{{3.792131547567256*^9, 
+  3.792131552679102*^9}},ExpressionUUID->"948bd493-2734-44d0-a494-\
+1f5e38e8b778"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"AnimateAutomata", "[", 
+   RowBox[{"rule_", ",", " ", "params_", ",", " ", 
+    RowBox[{"mapPlot_:", "ArrayPlot"}]}], "]"}], ":=", "\[IndentingNewLine]", 
+  
+  RowBox[{"Module", "[", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"automataHistory", "=", 
+      RowBox[{"CellularAutomaton", "[", 
+       RowBox[{"rule", ",", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"params", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], ",", "0"}], "}"}], ",", 
+        RowBox[{"params", "[", 
+         RowBox[{"[", "2", "]"}], "]"}]}], "]"}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Animate", "[", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"mapPlot", "@", 
+       RowBox[{"automataHistory", "[", 
+        RowBox[{"[", "n", "]"}], "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", " ", "1", ",", " ", 
+        RowBox[{
+         RowBox[{"params", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "+", "1"}], ",", " ", "1"}], "}"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{"AnimationRunning", "\[Rule]", "False"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"AnimationRepetitions", "\[Rule]", "Infinity"}]}], 
+     "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.792073350223002*^9, 3.7920733517011013`*^9}, 
+   3.79207356144748*^9, 3.792073613215761*^9, {3.792130397238133*^9, 
+   3.792130454443469*^9}, {3.792130489372389*^9, 3.792130549662215*^9}, {
+   3.792131005398316*^9, 3.792131033958664*^9}, {3.7921310714326553`*^9, 
+   3.7921310718547277`*^9}, {3.792131538039179*^9, 
+   3.7921315392311077`*^9}},ExpressionUUID->"b6b79f53-0d6e-4120-91a7-\
+e28de0aae033"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"blinker", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"1", ",", "1", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"star", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", 
+       "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", 
+       "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", 
+       "1", ",", "1", ",", "1", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "1", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "1", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "1", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "1", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", 
+       "1", ",", "1", ",", "1", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", 
+       "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", 
+       "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}]}], 
+    "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"kiss", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "1", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", 
+       "1", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "1", ",", "0", ",", "0", ",", "1", ",", 
+       "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", 
+       "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "1", ",", "0", ",", "0", ",", "1", ",", "0", ",", 
+       "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0"}], "}"}]}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"pinwheel", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", 
+       "1", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", 
+       "1", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "1", ",", 
+       "1", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "0", ",", "1", ",", "0", ",", "0", ",", "1", ",", 
+       "0", ",", "1", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", "1", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0", ",", "1", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", 
+       "0", ",", "1", ",", "0", ",", "1", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "1", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "1", ",", "0", ",", "1", ",", "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "1", ",", 
+       "1", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}]}], "}"}]}], 
+  ";"}], "\n", 
+ RowBox[{
+  RowBox[{"pulsar", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "1", ",", 
+       " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", 
+       ",", " ", "1", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "1", ",", 
+       " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", 
+       ",", " ", "1", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "1", ",", 
+       " ", "1", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "1", 
+       ",", " ", "1", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", 
+       " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", 
+       ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", " ", "1", ",", " ", "1", ",", " ", "0", ",", " ", "0", ",", 
+       " ", "1", ",", " ", "1", ",", " ", "0", ",", " ", "1", ",", " ", "1", 
+       ",", " ", "0", ",", " ", "0", ",", " ", "1", ",", " ", "1", ",", " ", 
+       "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", " ", "0", ",", " ", "1", ",", " ", "0", ",", " ", "1", ",", 
+       " ", "0", ",", " ", "1", ",", " ", "0", ",", " ", "1", ",", " ", "0", 
+       ",", " ", "1", ",", " ", "0", ",", " ", "1", ",", " ", "0", ",", " ", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "1", ",", 
+       " ", "1", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "1", 
+       ",", " ", "1", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", 
+       " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", 
+       ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "1", ",", 
+       " ", "1", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "1", 
+       ",", " ", "1", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", " ", "0", ",", " ", "1", ",", " ", "0", ",", " ", "1", ",", 
+       " ", "0", ",", " ", "1", ",", " ", "0", ",", " ", "1", ",", " ", "0", 
+       ",", " ", "1", ",", " ", "0", ",", " ", "1", ",", " ", "0", ",", " ", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "1", ",", " ", "1", ",", " ", "1", ",", " ", "0", ",", " ", "0", ",", 
+       " ", "1", ",", " ", "1", ",", " ", "0", ",", " ", "1", ",", " ", "1", 
+       ",", " ", "0", ",", " ", "0", ",", " ", "1", ",", " ", "1", ",", " ", 
+       "1"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", 
+       " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", 
+       ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "1", ",", 
+       " ", "1", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "1", 
+       ",", " ", "1", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "1", ",", 
+       " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", 
+       ",", " ", "1", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "1", ",", 
+       " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", "0", 
+       ",", " ", "1", ",", " ", "0", ",", " ", "0", ",", " ", "0", ",", " ", 
+       "0"}], "}"}]}], "}"}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"galaxy", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "1", ",", 
+       "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "1", ",", 
+       "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", 
+       "1", ",", "1", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", 
+       "1", ",", "1", ",", "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+      "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+       "0"}], "}"}]}], "}"}]}], ";"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{
+  3.7916481781849947`*^9, 3.7916482492061663`*^9, {3.791648811181234*^9, 
+   3.791648817159308*^9}, {3.791648849192443*^9, 3.791648857479295*^9}, {
+   3.7916488938297367`*^9, 3.791648894733959*^9}, {3.7916492931436768`*^9, 
+   3.791649315206731*^9}, {3.7916493514493313`*^9, 3.791649353486341*^9}, {
+   3.791649406290797*^9, 3.791649406407008*^9}, {3.79165660781802*^9, 
+   3.7916566146410513`*^9}, {3.7920736457433767`*^9, 3.792073649318913*^9}, {
+   3.792073699529746*^9, 3.792073707680635*^9}, 3.792073795059466*^9, {
+   3.792074327299775*^9, 3.792074392518045*^9}, {3.792074533376587*^9, 
+   3.7920745412873497`*^9}, {3.7920745895137167`*^9, 3.792074664675323*^9}, {
+   3.792074699060355*^9, 3.792074742397459*^9}, {3.7920749156593237`*^9, 
+   3.7920749162980967`*^9}, 3.792075018645481*^9, {3.79207565594202*^9, 
+   3.792075665149221*^9}, {3.7920757087882442`*^9, 3.7920757206514997`*^9}, 
+   3.7920758125467567`*^9, {3.792076271707162*^9, 3.792076275794465*^9}, {
+   3.792076347945035*^9, 3.792076387635306*^9}, {3.792076452364915*^9, 
+   3.7920764546642027`*^9}, {3.792077260692737*^9, 3.79207726640739*^9}, {
+   3.7920776289065228`*^9, 3.792077633858275*^9}, {3.792077669911272*^9, 
+   3.7920776708193398`*^9}, {3.792077728961841*^9, 3.792077733658948*^9}, {
+   3.7920780630912027`*^9, 3.792078071313089*^9}, {3.792131668514195*^9, 
+   3.792131668986209*^9}},ExpressionUUID->"9ab96aac-3860-4192-8b37-\
+d4a2d54be0bf"],
+
+Cell[CellGroupData[{
+
+Cell["Poni\:017cej znajduj\:0105 si\:0119 nast\:0119puj\:0105ce oscylatory:", \
+"Subtitle",
+ CellChangeTimes->{{3.792131889693453*^9, 
+  3.792131904445416*^9}},ExpressionUUID->"574ac4d5-afc4-468d-b54b-\
+c16ba69385b4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"desc", "=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"\"\<oscylator\>\"", ",", " ", "\"\<okres\>\""}], "}"}], ",", 
+    "\[IndentingNewLine]", " ", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Migacz\>\"", ",", " ", "2"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Gwiazda\>\"", ",", " ", "3"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Francuski Poca\[LSlash]unek\>\"", ",", " ", "3"}], "}"}], 
+    ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Pulsar\>\"", ",", " ", "3"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Wiatraczek\>\"", ",", " ", "4"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"\"\<Galaktyka\>\"", ",", " ", "8"}], "}"}]}], 
+   "\[IndentingNewLine]", "}"}]}], "\[IndentingNewLine]", 
+ RowBox[{"desc", " ", "//", "MatrixForm"}]}], "Input",
+ CellChangeTimes->{{3.792131796218792*^9, 3.792131864805234*^9}, {
+  3.7921319123835278`*^9, 3.7921319132620783`*^9}},
+ CellLabel->"In[30]:=",ExpressionUUID->"308ad5d2-4d4b-46b4-b6a7-c4ebcd23607f"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"\<\"oscylator\"\>", ",", "\<\"okres\"\>"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Migacz\"\>", ",", "2"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Gwiazda\"\>", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Francuski Poca\[LSlash]unek\"\>", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Pulsar\"\>", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Wiatraczek\"\>", ",", "4"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\<\"Galaktyka\"\>", ",", "8"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.792131821783386*^9, 3.792131829997004*^9}, {
+  3.792131906511127*^9, 3.792131914202407*^9}},
+ CellLabel->"Out[30]=",ExpressionUUID->"3bfe17f7-1d45-4c18-84b9-f0e28ea2d79e"],
+
+Cell[BoxData[
+ TagBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"\<\"oscylator\"\>", "\<\"okres\"\>"},
+     {"\<\"Migacz\"\>", "2"},
+     {"\<\"Gwiazda\"\>", "3"},
+     {"\<\"Francuski Poca\[LSlash]unek\"\>", "3"},
+     {"\<\"Pulsar\"\>", "3"},
+     {"\<\"Wiatraczek\"\>", "4"},
+     {"\<\"Galaktyka\"\>", "8"}
+    },
+    GridBoxAlignment->{"Columns" -> {{Center}}, "Rows" -> {{Baseline}}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}}], "\[NoBreak]", ")"}],
+  Function[BoxForm`e$, 
+   MatrixForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.792131821783386*^9, 3.792131829997004*^9}, {
+  3.792131906511127*^9, 3.792131914203918*^9}},
+ CellLabel->
+  "Out[31]//MatrixForm=",ExpressionUUID->"8f2afc87-c0a2-43c2-940b-\
+1ed75a6a0096"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"AnimateAutomata", "[", 
+    RowBox[{"\"\<GameOfLife\>\"", ",", "#1"}], "]"}], "&"}], "/@", 
+  RowBox[{"{", "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"blinker", ",", " ", "2"}], "}"}], " ", ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"star", ",", " ", "3"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"kiss", ",", " ", "3"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"pinwheel", ",", " ", "4"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"pulsar", ",", " ", "3"}], " ", "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"galaxy", ",", "8"}], "}"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.79207574991258*^9, 3.792075756177031*^9}, {
+  3.792075790794003*^9, 3.792075822738821*^9}, {3.79207635382981*^9, 
+  3.7920763547870073`*^9}, {3.792077269052884*^9, 3.792077269675906*^9}, {
+  3.792077676596438*^9, 3.792077676915862*^9}, {3.79207773639165*^9, 
+  3.792077737631997*^9}, {3.79207808005796*^9, 3.792078081464788*^9}, {
+  3.792079423758511*^9, 3.7920794918398943`*^9}, {3.79207952368891*^9, 
+  3.7920795297695723`*^9}, {3.79207971252112*^9, 3.7920798001142178`*^9}, {
+  3.792130558190078*^9, 3.792130614927788*^9}, {3.79213111449265*^9, 
+  3.792131218922235*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"a1e06e55-85a8-4d18-a00a-468547fe95b8"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`n$$ = 3, Typeset`show$$ = True, 
+      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+      "\"untitled\"", Typeset`specs$$ = {{
+        Hold[$CellContext`n$$], 1, 3, 1}}, Typeset`size$$ = {
+      720., {354., 365.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`n$8835$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+        "ControllerVariables" :> {
+          Hold[$CellContext`n$$, $CellContext`n$8835$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> ArrayPlot[
+          Part[$CellContext`automataHistory$8829, $CellContext`n$$]], 
+        "Specifications" :> {{$CellContext`n$$, 1, 3, 1, AnimationRunning -> 
+           False, AnimationRepetitions -> DirectedInfinity[1], 
+           AppearanceElements -> {
+            "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+             "DirectionButton"}}}, 
+        "Options" :> {
+         ControlType -> Animator, AppearanceElements -> None, 
+          DefaultBaseStyle -> "Animate", DefaultLabelStyle -> "AnimateLabel", 
+          SynchronousUpdating -> True, ShrinkingDelay -> 10.}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{806., {421., 433.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Animate",
+     Deployed->True,
+     StripOnInput->False],
+    Manipulate`InterpretManipulate[1]], ",", 
+   TagBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`n$$ = 1, Typeset`show$$ = True, 
+      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+      "\"untitled\"", Typeset`specs$$ = {{
+        Hold[$CellContext`n$$], 1, 4, 1}}, Typeset`size$$ = {
+      720., {354., 365.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`n$8852$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+        "ControllerVariables" :> {
+          Hold[$CellContext`n$$, $CellContext`n$8852$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> ArrayPlot[
+          Part[$CellContext`automataHistory$8830, $CellContext`n$$]], 
+        "Specifications" :> {{$CellContext`n$$, 1, 4, 1, AnimationRunning -> 
+           False, AnimationRepetitions -> DirectedInfinity[1], 
+           AppearanceElements -> {
+            "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+             "DirectionButton"}}}, 
+        "Options" :> {
+         ControlType -> Animator, AppearanceElements -> None, 
+          DefaultBaseStyle -> "Animate", DefaultLabelStyle -> "AnimateLabel", 
+          SynchronousUpdating -> True, ShrinkingDelay -> 10.}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{806., {421., 433.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Animate",
+     Deployed->True,
+     StripOnInput->False],
+    Manipulate`InterpretManipulate[1]], ",", 
+   TagBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`n$$ = 4, Typeset`show$$ = True, 
+      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+      "\"untitled\"", Typeset`specs$$ = {{
+        Hold[$CellContext`n$$], 1, 4, 1}}, Typeset`size$$ = {
+      720., {392., 403.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`n$8869$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+        "ControllerVariables" :> {
+          Hold[$CellContext`n$$, $CellContext`n$8869$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> ArrayPlot[
+          Part[$CellContext`automataHistory$8831, $CellContext`n$$]], 
+        "Specifications" :> {{$CellContext`n$$, 1, 4, 1, AnimationRunning -> 
+           False, AnimationRepetitions -> DirectedInfinity[1], 
+           AppearanceElements -> {
+            "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+             "DirectionButton"}}}, 
+        "Options" :> {
+         ControlType -> Animator, AppearanceElements -> None, 
+          DefaultBaseStyle -> "Animate", DefaultLabelStyle -> "AnimateLabel", 
+          SynchronousUpdating -> True, ShrinkingDelay -> 10.}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{806., {459., 471.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Animate",
+     Deployed->True,
+     StripOnInput->False],
+    Manipulate`InterpretManipulate[1]], ",", 
+   TagBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`n$$ = 1, Typeset`show$$ = True, 
+      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+      "\"untitled\"", Typeset`specs$$ = {{
+        Hold[$CellContext`n$$], 1, 5, 1}}, Typeset`size$$ = {
+      720., {354., 365.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`n$8886$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+        "ControllerVariables" :> {
+          Hold[$CellContext`n$$, $CellContext`n$8886$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> ArrayPlot[
+          Part[$CellContext`automataHistory$8832, $CellContext`n$$]], 
+        "Specifications" :> {{$CellContext`n$$, 1, 5, 1, AnimationRunning -> 
+           False, AnimationRepetitions -> DirectedInfinity[1], 
+           AppearanceElements -> {
+            "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+             "DirectionButton"}}}, 
+        "Options" :> {
+         ControlType -> Animator, AppearanceElements -> None, 
+          DefaultBaseStyle -> "Animate", DefaultLabelStyle -> "AnimateLabel", 
+          SynchronousUpdating -> True, ShrinkingDelay -> 10.}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{806., {421., 433.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Animate",
+     Deployed->True,
+     StripOnInput->False],
+    Manipulate`InterpretManipulate[1]], ",", 
+   TagBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`n$$ = 2, Typeset`show$$ = True, 
+      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+      "\"untitled\"", Typeset`specs$$ = {{
+        Hold[$CellContext`n$$], 1, 4, 1}}, Typeset`size$$ = {
+      720., {354., 365.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`n$8903$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+        "ControllerVariables" :> {
+          Hold[$CellContext`n$$, $CellContext`n$8903$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> ArrayPlot[
+          Part[$CellContext`automataHistory$8833, $CellContext`n$$]], 
+        "Specifications" :> {{$CellContext`n$$, 1, 4, 1, AnimationRunning -> 
+           False, AnimationRepetitions -> DirectedInfinity[1], 
+           AppearanceElements -> {
+            "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+             "DirectionButton"}}}, 
+        "Options" :> {
+         ControlType -> Animator, AppearanceElements -> None, 
+          DefaultBaseStyle -> "Animate", DefaultLabelStyle -> "AnimateLabel", 
+          SynchronousUpdating -> True, ShrinkingDelay -> 10.}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{806., {421., 433.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Animate",
+     Deployed->True,
+     StripOnInput->False],
+    Manipulate`InterpretManipulate[1]], ",", 
+   TagBox[
+    StyleBox[
+     DynamicModuleBox[{$CellContext`n$$ = 7, Typeset`show$$ = True, 
+      Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+      "\"untitled\"", Typeset`specs$$ = {{
+        Hold[$CellContext`n$$], 1, 9, 1}}, Typeset`size$$ = {
+      720., {354., 365.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+      Typeset`skipInitDone$$ = True, $CellContext`n$8920$$ = 0}, 
+      DynamicBox[Manipulate`ManipulateBoxes[
+       1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+        "ControllerVariables" :> {
+          Hold[$CellContext`n$$, $CellContext`n$8920$$, 0]}, 
+        "OtherVariables" :> {
+         Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+          Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+          Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
+          Typeset`initDone$$, Typeset`skipInitDone$$}, "Body" :> ArrayPlot[
+          Part[$CellContext`automataHistory$8834, $CellContext`n$$]], 
+        "Specifications" :> {{$CellContext`n$$, 1, 9, 1, AnimationRunning -> 
+           False, AnimationRepetitions -> DirectedInfinity[1], 
+           AppearanceElements -> {
+            "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+             "DirectionButton"}}}, 
+        "Options" :> {
+         ControlType -> Animator, AppearanceElements -> None, 
+          DefaultBaseStyle -> "Animate", DefaultLabelStyle -> "AnimateLabel", 
+          SynchronousUpdating -> True, ShrinkingDelay -> 10.}, 
+        "DefaultOptions" :> {}],
+       ImageSizeCache->{806., {421., 433.}},
+       SingleEvaluation->True],
+      Deinitialization:>None,
+      DynamicModuleValues:>{},
+      SynchronousInitialization->True,
+      UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+      UnsavedVariables:>{Typeset`initDone$$},
+      UntrackedVariables:>{Typeset`size$$}], "Animate",
+     Deployed->True,
+     StripOnInput->False],
+    Manipulate`InterpretManipulate[1]]}], "}"}]], "Output",
+ CellChangeTimes->{{3.792131200345973*^9, 3.792131221326912*^9}},
+ CellLabel->"Out[24]=",ExpressionUUID->"af221979-18c1-4ba8-872a-770bdfd9c2ca"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1920, 1014},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+TaggingRules->{"SlideshowSettings" -> {"Toolbar" -> True}},
+Magnification:>2. Inherited,
+FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 180, 3, 195, "Title",ExpressionUUID->"948bd493-2734-44d0-a494-1f5e38e8b778"],
+Cell[763, 27, 1747, 41, 458, "Input",ExpressionUUID->"b6b79f53-0d6e-4120-91a7-e28de0aae033"],
+Cell[2513, 70, 15992, 359, 1514, "Input",ExpressionUUID->"9ab96aac-3860-4192-8b37-d4a2d54be0bf"],
+Cell[CellGroupData[{
+Cell[18530, 433, 217, 4, 107, "Subtitle",ExpressionUUID->"574ac4d5-afc4-468d-b54b-c16ba69385b4"],
+Cell[CellGroupData[{
+Cell[18772, 441, 1144, 28, 414, "Input",ExpressionUUID->"308ad5d2-4d4b-46b4-b6a7-c4ebcd23607f"],
+Cell[19919, 471, 795, 19, 143, "Output",ExpressionUUID->"3bfe17f7-1d45-4c18-84b9-f0e28ea2d79e"],
+Cell[20717, 492, 913, 25, 364, "Output",ExpressionUUID->"8f2afc87-c0a2-43c2-940b-1ed75a6a0096"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21667, 522, 1435, 30, 326, "Input",ExpressionUUID->"a1e06e55-85a8-4d18-a00a-468547fe95b8"],
+Cell[23105, 554, 12480, 244, 2843, "Output",ExpressionUUID->"af221979-18c1-4ba8-872a-770bdfd9c2ca"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,1376 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     56088,       1368]
+NotebookOptionsPosition[     48276,       1217]
+NotebookOutlinePosition[     48640,       1233]
+CellTagsIndexPosition[     48597,       1230]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\<\
+Niesta\[LSlash]e kom\[OAcute]rkowe
+\
+\>", "Title",
+ CellChangeTimes->{
+  3.7921407940720673`*^9, {3.792179953241234*^9, 
+   3.79217996040798*^9}},ExpressionUUID->"cf2df73b-0ad1-4e11-bde6-\
+b1e0c873c534"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"AnimateAutomata", "[", 
+     RowBox[{"rule_", ",", "init_", ",", "steps_", ",", 
+      RowBox[{"mapPlot_:", "ArrayPlot"}]}], "]"}], ":=", 
+    RowBox[{"Module", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"automataHistory", "=", 
+        RowBox[{"CellularAutomaton", "[", 
+         RowBox[{"rule", ",", "init", ",", "steps"}], "]"}]}], "}"}], ",", 
+      RowBox[{"Animate", "[", 
+       RowBox[{
+        RowBox[{"mapPlot", "@", 
+         RowBox[{"automataHistory", "[", 
+          RowBox[{"[", "n", "]"}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"n", ",", "1", ",", 
+          RowBox[{"steps", "+", "1"}], ",", "1"}], "}"}], ",", 
+        RowBox[{"AnimationRunning", "\[Rule]", "False"}], ",", 
+        RowBox[{"AnimationRepetitions", "\[Rule]", "Infinity"}]}], "]"}]}], 
+     "]"}]}], ";"}], "\n"}]], "Input",
+ CellChangeTimes->{3.792140802518888*^9},
+ CellLabel->"In[1]:=",ExpressionUUID->"9845277c-1704-4446-8899-cf65d68da00b"],
+
+Cell[CellGroupData[{
+
+Cell["Definicja", "Subsection",
+ CellChangeTimes->{3.7921408111118937`*^9, 3.792179978083335*^9, 
+  3.7921800183872766`*^9},ExpressionUUID->"95499120-cfe2-4447-8812-\
+b26d3e9c0239"],
+
+Cell[CellGroupData[{
+
+Cell["\:015acis\[LSlash]a", "Subsubsection",
+ CellChangeTimes->{{3.7921806016910133`*^9, 
+  3.792180603098035*^9}},ExpressionUUID->"f2064229-9923-4ca1-8589-\
+641c0130d894"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Framed", "@", 
+  RowBox[{"Text", "[", 
+   RowBox[{"Style", "[", 
+    RowBox[{
+    "\"\<Niesta\[LSlash]\:0105 w uniwersum automat\[OAcute]w \
+kom\[OAcute]rkowych nazwiemy tak\:0105 struktur\:0119 \
+\!\(\*Cell[\"S\",ExpressionUUID->\"6370a36b-8f7c-4575-8f6b-788a1f314cfb\"]\), \
+\:017ce nie istnieje \
+\!\(\*Cell[\"k\",ExpressionUUID->\"9238eeee-37eb-4471-823a-ac478c503bba\"]\), \
+takie \:017ce \!\(\*Cell[TextData[{
+Cell[BoxData[FormBox[
+SuperscriptBox[\"f\", \"k\"], \
+TraditionalForm]],ExpressionUUID->\"df46b6a5-92e6-4ed7-b43b-a3ee49cf1909\"],
+\"(S)= S\"
+}],InitializationCell->True,ExpressionUUID->\"1ed1ecb1-6a02-4f69-95c5-\
+ea90b4d6dd92\"]\)\>\"", ",", 
+     RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.7921408323301497`*^9, 3.792140889855507*^9}, {
+  3.7921426471702557`*^9, 3.792142675377077*^9}, {3.792180024660228*^9, 
+  3.792180100007852*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"6f7e6487-7e1a-4e53-bd93-a707cf1be13a"],
+
+Cell[BoxData[
+ FrameBox[
+  InterpretationBox[Cell[BoxData[
+    FormBox[
+     StyleBox["\<\"Niesta\[LSlash]\:0105 w uniwersum automat\[OAcute]w kom\
+\[OAcute]rkowych nazwiemy tak\:0105 struktur\:0119 \
+\\!\\(\\*Cell[\\\"S\\\"]\\), \:017ce nie istnieje \
+\\!\\(\\*Cell[\\\"k\\\"]\\), takie \:017ce \
+\\!\\(\\*Cell[TextData[{\\nCell[BoxData[FormBox[\\nSuperscriptBox[\\\"f\\\", \
+\\\"k\\\"], TraditionalForm]]],\\n\\\"(S)= \
+S\\\"\\n}],InitializationCell->True]\\)\"\>",
+      StripOnInput->False,
+      TextAlignment->Center], TextForm]], "InlineText",ExpressionUUID->
+    "909a1ed8-35e8-4833-967f-18edec0a2140"],
+   Text[
+    Style[
+    "Niesta\[LSlash]\:0105 w uniwersum automat\[OAcute]w kom\[OAcute]rkowych \
+nazwiemy tak\:0105 struktur\:0119 \!\(\*Cell[\"S\"]\), \:017ce nie istnieje \
+\!\(\*Cell[\"k\"]\), takie \:017ce \!\(\*Cell[TextData[{\n\
+Cell[BoxData[FormBox[\nSuperscriptBox[\"f\", \"k\"], TraditionalForm]]],\n\
+\"(S)= S\"\n}],InitializationCell->True]\)", TextAlignment -> Center]]],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{3.792180102052223*^9, 3.792183133687387*^9, 
+  3.7921833324444532`*^9, 3.792432492860054*^9, 3.7933806714774647`*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"292caa14-40c1-4857-9164-f47c889eadaa"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Lu\:017ana", "Subsubsection",
+ CellChangeTimes->{{3.792180610258346*^9, 
+  3.792180611050318*^9}},ExpressionUUID->"7795bfd0-700e-4e29-a60a-\
+5b168cd14b2e"],
+
+Cell["\<\
+Wobec tego niesta\[LSlash]a jest niczym wi\:0119cej jak uk\[LSlash]adem, kt\
+\[OAcute]ry ju\:017c nigdy nie powr\[OAcute]ci do siebie. Zbi\[OAcute]r \
+takich uk\[LSlash]ad\[OAcute]w jest bardzo liczny, w \
+szczeg\[OAcute]lno\:015bci generuj\:0105c losowe uk\[LSlash]ady \
+kom\[OAcute]rek mo\:017cemy zauwa\:017cy\[CAcute], \:017ce \
+przyt\[LSlash]aczaj\:0105ca wi\:0119kszo\:015b\[CAcute] z nich jest struktur\
+\:0105 niesta\[LSlash]\:0105. W praktyce bardzo trudno wylosowa\[CAcute] \
+struktur\:0119, kt\[OAcute]ra nie jest niesta\[LSlash]a.\
+\>", "Text",
+ CellChangeTimes->{{3.792180133953875*^9, 3.792180137873948*^9}, {
+  3.792180257880598*^9, 3.792180284200663*^9}, {3.792180331877327*^9, 
+  3.792180463320635*^9}},ExpressionUUID->"f116faa6-b67e-4d52-832d-\
+89d7c84a3f5f"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Statki", "Subsection",
+ CellChangeTimes->{{3.792180632714645*^9, 
+  3.792180638082697*^9}},ExpressionUUID->"379e400e-3791-4ae0-aa95-\
+41f099058042"],
+
+Cell[CellGroupData[{
+
+Cell["Definicja", "Subsubsection",
+ CellChangeTimes->{{3.792180788301897*^9, 
+  3.792180790254054*^9}},ExpressionUUID->"05c0d13c-ec6c-4cad-978b-\
+19006c226ea0"],
+
+Cell["\<\
+Aby poruszy\[CAcute] nast\:0119pne definicje musimy wprowadzi\[CAcute] poj\
+\:0119cie statku. \
+\>", "Text",
+ CellChangeTimes->{{3.7921806462667637`*^9, 3.792180666051064*^9}, 
+   3.792180750541469*^9},ExpressionUUID->"3adc5de9-48d9-4955-aca9-\
+8dc41947e088"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Framed", "@", 
+  RowBox[{"Text", "[", 
+   RowBox[{"Style", "[", 
+    RowBox[{
+    "\"\<Statki s\:0105 okresowymi uk\[LSlash]adamy kom\[OAcute]rek, kt\
+\[OAcute]re wraz z ka\:017cdym cyklem przesuwaj\:0105 si\:0119 o sta\[LSlash]\
+\:0105 liczb\:0119 p\[OAcute]\[LSlash] w okre\:015blonym kierunku\>\"", ",", 
+     RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.792180756503931*^9, 3.792180761079069*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"26f07b19-cefb-442f-a55a-ad242fd2ab08"],
+
+Cell[BoxData[
+ FrameBox[
+  InterpretationBox[Cell[BoxData[
+    FormBox[
+     StyleBox["\<\"Statki s\:0105 okresowymi uk\[LSlash]adamy \
+kom\[OAcute]rek, kt\[OAcute]re wraz z ka\:017cdym cyklem przesuwaj\:0105 si\
+\:0119 o sta\[LSlash]\:0105 liczb\:0119 p\[OAcute]\[LSlash] w okre\:015blonym \
+kierunku\"\>",
+      StripOnInput->False,
+      TextAlignment->Center], TextForm]], "InlineText",ExpressionUUID->
+    "7888b9c5-0a62-4008-95db-d2a8c5263c66"],
+   Text[
+    Style[
+    "Statki s\:0105 okresowymi uk\[LSlash]adamy kom\[OAcute]rek, \
+kt\[OAcute]re wraz z ka\:017cdym cyklem przesuwaj\:0105 si\:0119 o sta\
+\[LSlash]\:0105 liczb\:0119 p\[OAcute]\[LSlash] w okre\:015blonym kierunku", 
+     TextAlignment -> Center]]],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{3.7921807625700493`*^9, 3.7921831337304897`*^9, 
+  3.792183332488446*^9, 3.792432492910054*^9, 3.7933806715119963`*^9},
+ CellLabel->"Out[3]=",ExpressionUUID->"c631c225-9eb5-42f7-82e7-1146f5a881ed"]
+}, Open  ]],
+
+Cell["\<\
+Statki zawdzi\:0119czaj\:0105 swoj\:0105 nazw\:0119 podobie\:0144stwu do \
+statk\[OAcute]w kosmicznych - s\:0105 to pewne struktury, kt\[OAcute]re w d\
+\[LSlash]u\:017cszej perspektywie czasu wygl\:0105daj\:0105 tak samo, \
+jednocze\:015bnie przemieszczaj\:0105c si\:0119 przez przestrze\:0144 \
+uniwersum.\
+\>", "Text",
+ CellChangeTimes->{{3.792181217633153*^9, 
+  3.79218127268713*^9}},ExpressionUUID->"4069eb60-eb1f-428c-87c0-\
+46227df055cb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Przyk\[LSlash]ad: Lot Dakoty", "Subsubsection",
+ CellChangeTimes->{{3.792180796286376*^9, 3.79218079739814*^9}, {
+  3.792181029509873*^9, 
+  3.792181031549899*^9}},ExpressionUUID->"bf51baf7-c189-4b44-a239-\
+3f49c28360e4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AnimateAutomata", "[", 
+  RowBox[{"\"\<GameOfLife\>\"", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "1", ",", "0", ",", "0", ",", "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "0", ",", "0", ",", "0", ",", "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "1", ",", "1", ",", "1", ",", "0"}], "}"}]}], "}"}],
+      ",", "0"}], "}"}], ",", "70"}], "]"}]], "Input",
+ CellChangeTimes->{{3.792180906522172*^9, 3.792180964108656*^9}, {
+  3.79218101256658*^9, 3.792181047998407*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"2879bed7-a4f4-40a1-bf00-3ab96677870b"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n$$], 1, 71, 1}}, Typeset`size$$ = {430., {8., 19.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`n$6389$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$6389$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ArrayPlot[
+        Part[$CellContext`automataHistory$6385, $CellContext`n$$]], 
+      "Specifications" :> {{$CellContext`n$$, 1, 71, 1, AnimationRunning -> 
+         False, AnimationRepetitions -> DirectedInfinity[1], 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{498., {62., 71.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.792180965300994*^9, {3.792181017179854*^9, 3.79218104836707*^9}, 
+   3.792183133852442*^9, 3.792183332593*^9, 3.792432493011579*^9, 
+   3.7933806715831823`*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"7edf286f-c3b6-4331-bf1e-ebeaa09919da"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Stabilizacja", "Subsection",
+ CellChangeTimes->{{3.792181286759741*^9, 
+  3.7921812891080217`*^9}},ExpressionUUID->"4a71e470-78f9-40f2-9930-\
+8d055be20bf0"],
+
+Cell[CellGroupData[{
+
+Cell["Definicja", "Subsubsection",
+ CellChangeTimes->{{3.79218142358987*^9, 
+  3.7921814250780773`*^9}},ExpressionUUID->"1b3f0c88-9d02-4ce9-a068-\
+e00aab809333"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Framed", "@", 
+  RowBox[{"Text", "[", 
+   RowBox[{"Style", "[", 
+    RowBox[{
+    "\"\<Stabilizacj\:0105 nazywamy przej\:015bcie uk\[LSlash]adu do zestawu \
+uk\[LSlash]ad\[OAcute]w stabilnych, oscylator\[OAcute]w i \
+statk\[OAcute]w\>\"", ",", 
+     RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.7921813840086727`*^9, 3.792181401047274*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"85a5244a-2f12-4c0a-802f-49e7a47a8083"],
+
+Cell[BoxData[
+ FrameBox[
+  InterpretationBox[Cell[BoxData[
+    FormBox[
+     StyleBox["\<\"Stabilizacj\:0105 nazywamy przej\:015bcie uk\[LSlash]adu \
+do zestawu uk\[LSlash]ad\[OAcute]w stabilnych, oscylator\[OAcute]w i statk\
+\[OAcute]w\"\>",
+      StripOnInput->False,
+      TextAlignment->Center], TextForm]], "InlineText",ExpressionUUID->
+    "9a21474d-5a6d-4d78-b76d-e4dcb412a1a7"],
+   Text[
+    Style[
+    "Stabilizacj\:0105 nazywamy przej\:015bcie uk\[LSlash]adu do zestawu uk\
+\[LSlash]ad\[OAcute]w stabilnych, oscylator\[OAcute]w i statk\[OAcute]w", 
+     TextAlignment -> Center]]],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{3.792181405029958*^9, 3.792183133918151*^9, 
+  3.792183332646715*^9, 3.792432493054653*^9, 3.793380671633854*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"a3dc101d-2e24-40e1-9a0e-92ac0dddd7d5"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Wsp\[OAcute]\[LSlash]czynnik stabilizacji (L)", "Subsubsection",
+ CellChangeTimes->{{3.792181433361864*^9, 3.792181440702839*^9}, {
+  3.792182496283033*^9, 
+  3.792182497769477*^9}},ExpressionUUID->"ed263623-067e-4470-85c7-\
+c07d3519189a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Framed", "@", 
+  RowBox[{"Text", "[", 
+   RowBox[{"Style", "[", 
+    RowBox[{
+    "\"\<Wsp\[OAcute]\[LSlash]czynnikiem stabilizacji nazwiemy stosunek \
+liczby krok\[OAcute]w potrzebnych w celu stabilizacji, do pocz\:0105tkowej \
+liczby \:017cywych kom\[OAcute]rek\>\"", ",", 
+     RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.792181450912221*^9, 3.7921814929239807`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"802aafbc-f4dd-4d1b-8ea5-e0c56b539c8e"],
+
+Cell[BoxData[
+ FrameBox[
+  InterpretationBox[Cell[BoxData[
+    FormBox[
+     StyleBox["\<\"Wsp\[OAcute]\[LSlash]czynnikiem stabilizacji nazwiemy \
+stosunek liczby krok\[OAcute]w potrzebnych w celu stabilizacji, do \
+pocz\:0105tkowej liczby \:017cywych kom\[OAcute]rek\"\>",
+      StripOnInput->False,
+      TextAlignment->Center], TextForm]], "InlineText",ExpressionUUID->
+    "13067f4b-ea3e-4c17-8030-95984d69b147"],
+   Text[
+    Style[
+    "Wsp\[OAcute]\[LSlash]czynnikiem stabilizacji nazwiemy stosunek liczby \
+krok\[OAcute]w potrzebnych w celu stabilizacji, do pocz\:0105tkowej liczby \
+\:017cywych kom\[OAcute]rek", TextAlignment -> Center]]],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{3.792181495564022*^9, 3.792183133967985*^9, 
+  3.7921833326931353`*^9, 3.792432493090818*^9, 3.793380671681082*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"a9fa89d7-92f0-4818-bafd-c78477ca8a17"]
+}, Open  ]],
+
+Cell["\<\
+Wobec tego stabilizacja to swojego rodzaju przej\:015bcie z chaotycznego \
+stanu do ustabilizowanego, za\:015b wsp\[OAcute]\[LSlash]czynnik stabilizacji \
+m\[OAcute]wi nam jak bardzo trudny do ustabilizowania by\[LSlash] \
+uk\[LSlash]ad, bior\:0105c pod uwag\:0119 pocz\:0105tkow\:0105 liczb\:0119 \
+kom\[OAcute]rek \:017cywych, kt\[OAcute]re nale\:017ca\[LSlash]o \
+okie\[LSlash]zna\[CAcute].  Jest to o tyle ciekawe zjawisko, bowiem czytelnik \
+m\[OAcute]g\[LSlash]by doj\:015b\[CAcute] do wniosku, \:017ce plansze albo \
+maj\:0105 sk\[LSlash]onno\:015b\[CAcute] do relatywnie szybkiej stabilizacji \
+(niski wsp\[OAcute]\[LSlash]czynnik stabilizacji), albo pozostanie w chaosie \
+do ko\:0144ca. Jednak\:017ce niekt\[OAcute]re struktury maj\:0105  bardzo \
+wysoki wsp\[OAcute]\[LSlash]czynnik stabilizacji. \
+\>", "Text",
+ CellChangeTimes->{{3.792181786679798*^9, 3.792181832544705*^9}, {
+   3.792181863506884*^9, 3.792181989973721*^9}, {3.792182109426188*^9, 
+   3.792182141637393*^9}, 
+   3.792182293535399*^9},ExpressionUUID->"a62101c6-92a1-4659-a9d5-\
+39cb14e50656"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+R-pentomino: Przyk\[LSlash]ad uk\[LSlash]adu z wysokim \
+wsp\[OAcute]\[LSlash]czynnikiem stabilizacji (L=221)\
+\>", "Subsubsection",
+ CellChangeTimes->{{3.792182377671719*^9, 3.792182412103409*^9}, {
+  3.7921825021430893`*^9, 
+  3.792182513246848*^9}},ExpressionUUID->"1aa49739-5911-4518-9e24-\
+63cf163e7031"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AnimateAutomata", "[", 
+  RowBox[{"\"\<GameOfLife\>\"", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "1", ",", "1"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"1", ",", "1", ",", "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "1", ",", "0"}], "}"}]}], "}"}], ",", "0"}], "}"}], 
+   ",", "1200"}], "]"}]], "Input",
+ CellChangeTimes->{{3.792182436553019*^9, 3.792182481017455*^9}, {
+  3.792182525253172*^9, 3.792182527958487*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"c917630e-16ed-46a4-baad-96b549fcc6ff"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n$$], 1, 1201, 1}}, Typeset`size$$ = {
+    430., {8., 19.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`n$6458$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$6458$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ArrayPlot[
+        Part[$CellContext`automataHistory$6449, $CellContext`n$$]], 
+      "Specifications" :> {{$CellContext`n$$, 1, 1201, 1, AnimationRunning -> 
+         False, AnimationRepetitions -> DirectedInfinity[1], 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{498., {62., 71.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.792182470887527*^9, 3.792182530717442*^9, 
+  3.792183136492077*^9, 3.792183335294372*^9, 3.7924324954465857`*^9, 
+  3.793380674475862*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"841ebbbf-5344-43d4-b936-99d74ef61300"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Matuzalema", "Subsubsection",
+ CellChangeTimes->{{3.792182829818293*^9, 
+  3.79218283329891*^9}},ExpressionUUID->"d0981f00-3dde-4112-b425-\
+c9493d2e8a46"],
+
+Cell[TextData[{
+ "Aby sformalizowa\[CAcute] uk\[LSlash]ady z wysokim ",
+ Cell[BoxData[
+  FormBox["L", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "b76496a7-556e-46f2-afa7-5862247a0fbf"],
+ " wprowadzono nast\:0119puj\:0105c\:0105 definicj\:0119."
+}], "Text",
+ CellChangeTimes->{{3.7921828677565203`*^9, 
+  3.792182884108869*^9}},ExpressionUUID->"4d727f67-cb26-4947-80e7-\
+d038329df944"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Framed", "@", 
+  RowBox[{"Text", "[", 
+   RowBox[{"Style", "[", 
+    RowBox[{
+    "\"\<Matuzalemem nazwiemy uk\[LSlash]ad z wysokoim \
+wsp\[OAcute]\[LSlash]czynnikiem stabilizacji\>\"", ",", 
+     RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.79218283730961*^9, 3.792182891189151*^9}, {
+  3.792432597838502*^9, 3.7924326003381977`*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"5e684de6-afd1-43cd-8004-158d1f524243"],
+
+Cell[BoxData[
+ FrameBox[
+  InterpretationBox[Cell[BoxData[
+    FormBox[
+     StyleBox["\<\"Matuzalemem nazwiemy uk\[LSlash]ad z wysokoim wsp\[OAcute]\
+\[LSlash]czynnikiem stabilizacji\"\>",
+      StripOnInput->False,
+      TextAlignment->Center], TextForm]], "InlineText",ExpressionUUID->
+    "a60f6412-7453-4c2c-a044-ad0ec572b3bb"],
+   Text[
+    Style[
+    "Matuzalemem nazwiemy uk\[LSlash]ad z wysokoim \
+wsp\[OAcute]\[LSlash]czynnikiem stabilizacji", TextAlignment -> Center]]],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{3.79218290145886*^9, 3.792183136598871*^9, 
+  3.7921833353863564`*^9, 3.792432495500136*^9, 3.792432601614154*^9, 
+  3.7933806745915337`*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"5afdf731-d948-4a54-94a5-32a67a176707"]
+}, Open  ]],
+
+Cell[TextData[{
+ "R-pentomino z poprzedniego przyk\[LSlash]adu jest przyk\[LSlash]adem \
+Matuzalema. Innym znanym Matuzalemem ze wsp\[OAcute]\[LSlash]czynnikiem ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"L", "=", "700"}], TraditionalForm]],ExpressionUUID->
+  "6f61e2c6-d97a-4e82-8688-01d839ec9471"],
+ " jest tzw. \:017co\[LSlash]\:0105d\:017a. Stabilizuje si\:0119 on po ok. \
+5300 krokach. Ze wzgl\:0119du na ograniczenia RAM zostanie pokazane jego \
+pierwsze 1000 krok\[OAcute]w.\n"
+}], "Text",
+ CellChangeTimes->{{3.792182904437882*^9, 3.792182959390546*^9}, {
+  3.792183104409109*^9, 3.7921831217610607`*^9}, {3.792183154177977*^9, 
+  3.792183170148519*^9}, {3.792183322184978*^9, 
+  3.792183324942384*^9}},ExpressionUUID->"81405c98-dde9-416d-b180-\
+26ed49eda57d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AnimateAutomata", "[", 
+  RowBox[{"\"\<GameOfLife\>\"", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0"}], 
+        "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "0", ",", "0", ",", "1", ",", "0", ",", "0", ",", "0"}], 
+        "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+        "1", ",", "1", ",", "0", ",", "0", ",", "1", ",", "1", ",", "1"}], 
+        "}"}]}], "}"}], ",", "0"}], "}"}], ",", "1000"}], "]"}]], "Input",
+ CellChangeTimes->{{3.792182983086773*^9, 3.792183039751495*^9}, {
+   3.792183101911261*^9, 3.792183124777*^9}, 3.7921831625709143`*^9, {
+   3.7921833268316298`*^9, 3.792183327918808*^9}},
+ CellLabel->"In[9]:=",ExpressionUUID->"e3a920b3-90a1-40ac-8923-8ed0c7cc2242"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 871, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n$$], 1, 1001, 1}}, Typeset`size$$ = {
+    455., {8., 19.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`n$6508$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$6508$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ArrayPlot[
+        Part[$CellContext`automataHistory$6507, $CellContext`n$$]], 
+      "Specifications" :> {{$CellContext`n$$, 1, 1001, 1, AnimationRunning -> 
+         False, AnimationRepetitions -> DirectedInfinity[1], 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{523., {62., 71.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.792183125080139*^9, 3.792183138331216*^9}, {
+   3.792183328312584*^9, 3.7921833359883823`*^9}, 3.7924324962813463`*^9, 
+   3.793380675234157*^9},
+ CellLabel->"Out[9]=",ExpressionUUID->"df98560d-591e-408c-9c5c-7032f6a1bc6a"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Die-Hardy", "Subsection",
+ CellChangeTimes->{{3.79218271197999*^9, 
+  3.792182716436101*^9}},ExpressionUUID->"747daa40-7da8-4838-9eb2-\
+48d1f5db99e0"],
+
+Cell[CellGroupData[{
+
+Cell["Definicja", "Subsubsection",
+ CellChangeTimes->{{3.792182723667948*^9, 
+  3.792182728124185*^9}},ExpressionUUID->"0f0c1e68-fc80-4693-83d3-\
+c658c6903559"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Framed", "@", 
+  RowBox[{"Text", "[", 
+   RowBox[{"Style", "[", 
+    RowBox[{
+    "\"\<DieHardem nazwiemy uk\[LSlash]ad, kt\[OAcute]ry umiera po \
+sko\:0144czonym czasie \
+\!\(\*Cell[\"T\",ExpressionUUID->\"3fda1bc4-f4e1-48a4-b7ff-0b2f263be785\"]\), \
+jednak \!\(\*Cell[\"T\",ExpressionUUID->\"d14bc172-c3fe-4895-aa27-\
+82d5636caf1e\"]\) jest postrzegany jako du\:017cy.\>\"", ",", 
+     RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.7921827493654947`*^9, 3.7921827554763947`*^9}, {
+  3.792433103419393*^9, 3.792433182461473*^9}},
+ CellLabel->"In[10]:=",ExpressionUUID->"e8284c8b-4841-4340-9f08-343263ff2a41"],
+
+Cell[BoxData[
+ FrameBox[
+  InterpretationBox[Cell[BoxData[
+    FormBox[
+     StyleBox["\<\"DieHardem nazwiemy uk\[LSlash]ad, kt\[OAcute]ry umiera po \
+sko\:0144czonym czasie \\!\\(\\*Cell[\\\"T\\\"]\\), jednak \
+\\!\\(\\*Cell[\\\"T\\\"]\\) jest postrzegany jako du\:017cy.\"\>",
+      StripOnInput->False,
+      TextAlignment->Center], TextForm]], "InlineText",ExpressionUUID->
+    "e8e32556-28a1-4427-87f6-43735e1f26e5"],
+   Text[
+    Style[
+    "DieHardem nazwiemy uk\[LSlash]ad, kt\[OAcute]ry umiera po \
+sko\:0144czonym czasie \!\(\*Cell[\"T\"]\), jednak \!\(\*Cell[\"T\"]\) jest \
+postrzegany jako du\:017cy.", TextAlignment -> Center]]],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{3.7921831384093323`*^9, 3.792183336066918*^9, 
+  3.792432496332058*^9, 3.792433187358692*^9, 3.793380675278344*^9},
+ CellLabel->"Out[10]=",ExpressionUUID->"7fb44b99-8481-45c6-b8fd-41a2e460dcca"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Jak widzimy powy\:017csza definicja nie jest do ko\:0144ca \:015bcis\
+\[LSlash]a poniewa\:017c nikt nie sprecyzowa\[LSlash] jak du\:017cy czas \
+umierania musi by\[CAcute]. Nie mniej jednak w\:015br\[OAcute]d zbioru \
+wszystkich umieraj\:0105cych po sko\:0144czonym czasie \
+uk\[LSlash]ad\[OAcute]w, jeste\:015bmy w stanie wskaza\[CAcute] te, kt\
+\[OAcute]rych ",
+ Cell[BoxData[
+  FormBox["T", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "890208cb-2b59-47d1-8f5e-a378bda81e00"],
+ " znacz\:0105co przewy\:017csza inne. "
+}], "Text",
+ CellChangeTimes->{{3.792433193085142*^9, 3.7924332186140337`*^9}, {
+  3.7924333524743567`*^9, 3.792433383915351*^9}, {3.792433543616531*^9, 
+  3.7924335486403217`*^9}},ExpressionUUID->"400bea12-d69c-4394-b32d-\
+badf44af5a30"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Przyk\[LSlash]ad", "Subsubsection",
+ CellChangeTimes->{{3.792433557728366*^9, 
+  3.7924335589363327`*^9}},ExpressionUUID->"5adbb20a-c526-40bd-8686-\
+644b7d30cc5c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AnimateAutomata", "[", 
+  RowBox[{"\"\<GameOfLife\>\"", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "1", ",", 
+         " ", "0"}], "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+        "1", ",", "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+         " ", "0"}], "}"}], ",", " ", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "1", ",", "0", ",", "0", ",", "0", ",", "1", ",", "1", ",", 
+         " ", "1"}], "}"}]}], "}"}], ",", "0"}], "}"}], ",", "150"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.792433570985133*^9, 3.79243361232242*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"e795f9be-b284-46a7-85a0-fa7b09814521"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 57, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n$$], 1, 151, 1}}, Typeset`size$$ = {442., {8., 19.}},
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`n$6557$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$6557$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ArrayPlot[
+        Part[$CellContext`automataHistory$6556, $CellContext`n$$]], 
+      "Specifications" :> {{$CellContext`n$$, 1, 151, 1, AnimationRunning -> 
+         False, AnimationRepetitions -> DirectedInfinity[1], 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{510., {62., 71.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.792433613449648*^9, 3.793380675330153*^9},
+ CellLabel->"Out[11]=",ExpressionUUID->"f2ef49a4-4a70-47f2-8282-7440322d4497"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Ogrody Edenu", "Subsection",
+ CellChangeTimes->{
+  3.792433782970951*^9},ExpressionUUID->"62cb43f4-b12a-4fb6-80a8-\
+706e7983db4e"],
+
+Cell[CellGroupData[{
+
+Cell["Definicja", "Subsubsection",
+ CellChangeTimes->{{3.792433796472341*^9, 3.792433797880083*^9}, {
+  3.792433831028101*^9, 
+  3.7924338334651546`*^9}},ExpressionUUID->"7bcffa90-6513-4d86-965f-\
+7f0aafdc1905"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Framed", "@", 
+  RowBox[{"Text", "[", 
+   RowBox[{"Style", "[", 
+    RowBox[{
+    "\"\<Ogrodem Edenu nazwiemy taki uk\[LSlash]ad \
+\!\(\*Cell[\"S\",ExpressionUUID->\"2f5f8e9b-7e47-4f1b-8db7-ca49decff217\"]\), \
+dla kt\[OAcute]rego nie istnieje stan pocz\:0105tkowy \
+\!\(\*SubscriptBox[Cell[\"S\",ExpressionUUID->\"541510e9-a9c1-4a69-8f41-\
+729c59b6f657\"], \"0\"]\), oraz nast\:0119puj\:0105ce po nim \
+\!\(\*SubscriptBox[\(S\), \(1\)]\), \!\(\*SubscriptBox[\(S\), \(2\)]\),..., \
+\!\(\*SubscriptBox[\(S\), \(k\)]\), takie \:017ce \!\(\*SubscriptBox[\(S\), \
+\(k\)]\)=S.\>\"", ",", 
+     RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.792433834715252*^9, 3.792433911451977*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"76b3f42a-3ada-4c9d-b523-96f6e860a4be"],
+
+Cell[BoxData[
+ FrameBox[
+  InterpretationBox[Cell[BoxData[
+    FormBox[
+     StyleBox["\<\"Ogrodem Edenu nazwiemy taki uk\[LSlash]ad \\!\\(\\*Cell[\\\
+\"S\\\"]\\), dla kt\[OAcute]rego nie istnieje stan pocz\:0105tkowy \
+\\!\\(\\*SubscriptBox[Cell[\\\"S\\\"], \\\"0\\\"]\\), oraz \
+nast\:0119puj\:0105ce po nim \\!\\(\\*SubscriptBox[\\(S\\), \\(1\\)]\\), \
+\\!\\(\\*SubscriptBox[\\(S\\), \\(2\\)]\\),..., \
+\\!\\(\\*SubscriptBox[\\(S\\), \\(k\\)]\\), takie \:017ce \
+\\!\\(\\*SubscriptBox[\\(S\\), \\(k\\)]\\)=S.\"\>",
+      StripOnInput->False,
+      TextAlignment->Center], TextForm]], "InlineText",ExpressionUUID->
+    "54dd5650-a608-4d20-97d2-3fa360314fda"],
+   Text[
+    Style[
+    "Ogrodem Edenu nazwiemy taki uk\[LSlash]ad \!\(\*Cell[\"S\"]\), dla kt\
+\[OAcute]rego nie istnieje stan pocz\:0105tkowy \
+\!\(\*SubscriptBox[Cell[\"S\"], \"0\"]\), oraz nast\:0119puj\:0105ce po nim \
+\!\(\*SubscriptBox[\(S\), \(1\)]\), \!\(\*SubscriptBox[\(S\), \(2\)]\),..., \
+\!\(\*SubscriptBox[\(S\), \(k\)]\), takie \:017ce \!\(\*SubscriptBox[\(S\), \
+\(k\)]\)=S.", TextAlignment -> Center]]],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{3.792433836906761*^9, 3.7924339138113327`*^9, 
+  3.793380675383423*^9},
+ CellLabel->"Out[12]=",ExpressionUUID->"775e639d-7c76-42a4-9a08-e8e1ec842db9"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Innymi s\[LSlash]owy, Ogrody Edenu to takie uk\[LSlash]ady, nie \
+mog\[LSlash]y powsta\[CAcute] jako ci\:0105g przekszta\[LSlash]ce\:0144 \
+pewnego uk\[LSlash]adu ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["S", "0"], TraditionalForm]],ExpressionUUID->
+  "f1905c86-9d3f-45c9-8380-e80d595f51cc"],
+ ". Mog\:0105 one by\[CAcute] zatem tylko i wy\[LSlash]\:0105cznie \
+uk\[LSlash]adami pocz\:0105tkowymi w symulacji. TODO:  \
+https://en.wikipedia.org/wiki/Garden_of_Eden_(cellular_automaton)"
+}], "Text",
+ CellChangeTimes->{{3.792433921043991*^9, 3.792433936708919*^9}, {
+  3.792433972517816*^9, 3.792433984430272*^9}, {3.792434035039772*^9, 
+  3.792434120146358*^9}, {3.7924341925891047`*^9, 
+  3.792434219325918*^9}},ExpressionUUID->"daf17302-63b0-4751-a8e3-\
+ddc300dffc9c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Przyk\[LSlash]ad", "Subsubsection",
+ CellChangeTimes->{{3.7933807744072533`*^9, 
+  3.793380780471745*^9}},ExpressionUUID->"b8b44e47-912a-4802-8192-\
+8896627b1b9e"],
+
+Cell["\<\
+Poni\:017cej znajduje si\:0119 jeden z najmniejszych znanych przyk\[LSlash]ad\
+\[OAcute]w Ogrod\[OAcute]w Edenu. Prosz\:0119, aby\:015bmy zwr\[OAcute]cili \
+uwag\:0119 na ich rozmiar - mimo wszystko jest imponuj\:0105co du\:017cy.
+\
+\>", "Text",
+ CellChangeTimes->{{3.7933807847440653`*^9, 
+  3.7933808424737577`*^9}},ExpressionUUID->"ebbde0e1-2f17-4474-a672-\
+fc640342f1a4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"AnimateAutomata", "[", 
+  RowBox[{"\"\<GameOfLife\>\"", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+          "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "0", ",", "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", 
+         "1", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+          "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "1", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", 
+         "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", "0", ",",
+          "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", 
+         "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", "0", ",", "0", ",",
+          "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", "0", ",", 
+         "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", "0", ",",
+          "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", 
+         "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", "0", ",",
+          "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", 
+         "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", "0", ",",
+          "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "0", ",", "0", ",", "1", ",", "0", ",", "0", ",", "0", ",", 
+         "1", ",", "1", ",", "1", ",", "0", ",", "0", ",", "1", ",", "1", ",",
+          "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "0", ",", 
+         "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "0", ",",
+          "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "1", ",", "1", ",", "1", ",", "0", ",", "1", ",", "1", ",", 
+         "1", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0", ",",
+          "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "0", ",", "1", ",", "0", ",", "1", ",", "1", ",", "1", ",", 
+         "1", ",", "0", ",", "0", ",", "0", ",", "1", ",", "0", ",", "0", ",",
+          "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "0", ",", "1", ",", "0", ",", "1", ",", "0", ",", "1", ",", 
+         "1", ",", "0", ",", "0", ",", "1", ",", "0", ",", "0", ",", "0", ",",
+          "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "0", ",", "1", ",", "1", ",", "0", ",", "1", ",", "0", ",", 
+         "0", ",", "1", ",", "1", ",", "0", ",", "0", ",", "1", ",", "0", ",",
+          "0"}], "}"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+         "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+          "0"}], "}"}]}], "}"}], ",", "0"}], "}"}], ",", "25"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{
+  3.7933808543246593`*^9, {3.793382124189707*^9, 3.79338215615202*^9}},
+ CellLabel->"In[16]:=",ExpressionUUID->"d8926858-6824-4792-9f34-145c92324512"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`n$$ = 1, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`n$$], 1, 26, 1}}, Typeset`size$$ = {442., {8., 19.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`n$21718$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`n$$, $CellContext`n$21718$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> ArrayPlot[
+        Part[$CellContext`automataHistory$21717, $CellContext`n$$]], 
+      "Specifications" :> {{$CellContext`n$$, 1, 26, 1, AnimationRunning -> 
+         False, AnimationRepetitions -> DirectedInfinity[1], 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{510., {62., 71.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.793380855658215*^9, {3.793382126982094*^9, 3.7933821605264273`*^9}},
+ CellLabel->"Out[16]=",ExpressionUUID->"e3f22a98-8438-46dc-8a4e-3cd63632f238"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Algorytm", "Subsubsection",
+ CellChangeTimes->{{3.7933849843832197`*^9, 
+  3.793384987325316*^9}},ExpressionUUID->"91bcc837-9a6b-47ca-bdca-\
+611054c549d3"],
+
+Cell["\<\
+Ogrody Edenu s\:0105 na tyle ciekawym zjawiskiem w uniwersum Conway\
+\[CloseCurlyQuote]a, \:017ce doczeka\[LSlash]y \
+si\:0119\[NonBreakingSpace]wielu bada\:0144 na ich temat. Istnieje algorytm \
+liniowego wykrywania ogrod\[OAcute]w edenu w czasie wielomianowym.\
+\>", "Text",
+ CellChangeTimes->{{3.793384992951076*^9, 3.793385024765767*^9}, {
+   3.7933851002488422`*^9, 3.793385124022643*^9}, {3.7933853755953293`*^9, 
+   3.793385396684441*^9}, 
+   3.7933855065606823`*^9},ExpressionUUID->"672f9ecb-62d5-48f9-ba7b-\
+6b29190e06ae"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Framed", "@", 
+  RowBox[{"Text", "[", 
+   RowBox[{"Style", "[", 
+    RowBox[{
+    "\"\<An Efficient Algorithm for the Detection of Eden (David J. Warne, \
+Ross F. Hayward, Neil A. Kelson, Dann G. Mallet)\>\"", ",", 
+     RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{
+  3.7933854005642223`*^9, {3.793385446737677*^9, 3.793385469578588*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"20eec8a7-462d-4000-9328-8175c4545d83"],
+
+Cell[BoxData[
+ FrameBox[
+  InterpretationBox[Cell[BoxData[
+    FormBox[
+     StyleBox["\<\"An Efficient Algorithm for the Detection of Eden (David J. \
+Warne, Ross F. Hayward, Neil A. Kelson, Dann G. Mallet)\"\>",
+      StripOnInput->False,
+      TextAlignment->Center], TextForm]], "InlineText",ExpressionUUID->
+    "45654407-4c30-48e7-b718-35863423f223"],
+   Text[
+    Style[
+    "An Efficient Algorithm for the Detection of Eden (David J. Warne, Ross \
+F. Hayward, Neil A. Kelson, Dann G. Mallet)", TextAlignment -> Center]]],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{3.793385504229892*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"dd74fb6f-8ce3-407a-a74e-d429b8f2999f"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Sam algorytm jest skomplikowany i wielofazowy. Jednak sukcesem jest to, \
+\:017ce w og\[OAcute]le takowy istnieje, gdy\:017c dla  ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"d", ">", "1"}], TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "1964aed2-a57f-4fd9-8a90-887aa98a25a2"],
+ " wymiar\[OAcute]w udowodniono, \:017ce nie istnieje taki algorytm, kt\
+\[OAcute]ry gwarantuje sko\:0144czenie i danie poprawnej odpowiedzi. Dow\
+\[OAcute]d ten sformu\[LSlash]owa\[LSlash] fi\:0144ski matematyk i informatyk \
+Jarkko Kari w swojej pracy:\n"
+}], "Text",
+ CellChangeTimes->{{3.7933855132761374`*^9, 3.793385543392227*^9}, {
+  3.7933856779718037`*^9, 3.793385684249853*^9}, {3.793385721906735*^9, 
+  3.793385796122798*^9}, {3.793385874497369*^9, 
+  3.79338596933589*^9}},ExpressionUUID->"bae24125-230c-4f5c-a6e1-\
+f07817074a9a"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Framed", "@", 
+  RowBox[{"Text", "[", 
+   RowBox[{"Style", "[", 
+    RowBox[{
+    "\"\<Reversibility of 2D cellular automata is undecidable (Jarkko Kari)\>\
+\"", ",", 
+     RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.7933859932115507`*^9, 3.7933860016081553`*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"398f15a7-ee84-47af-b578-c82394a47c2b"],
+
+Cell[BoxData[
+ FrameBox[
+  InterpretationBox[Cell[BoxData[
+    FormBox[
+     StyleBox["\<\"Reversibility of 2D cellular automata is undecidable \
+(Jarkko Kari)\"\>",
+      StripOnInput->False,
+      TextAlignment->Center], TextForm]], "InlineText",ExpressionUUID->
+    "9c05f6eb-82b2-4a24-a144-719d703bc766"],
+   Text[
+    Style[
+    "Reversibility of 2D cellular automata is undecidable (Jarkko Kari)", 
+     TextAlignment -> Center]]],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{3.793386003579459*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"ad619b15-a4c5-45d7-9f34-5aa1f953b53c"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Twierdzenie o Ogrodach Edenu", "Subsubsection",
+ CellChangeTimes->{{3.79338661243541*^9, 
+  3.793386618286798*^9}},ExpressionUUID->"407065bf-fe8d-44dd-9259-\
+32c701b089c5"],
+
+Cell["Na pocz\:0105tek wprowadzimy definicj\:0119 Bli\:017aniaka.", "Text",
+ CellChangeTimes->{{3.793386694196023*^9, 3.7933867096243057`*^9}, {
+  3.7933872526466827`*^9, 
+  3.793387253365198*^9}},ExpressionUUID->"6e82b8f0-0566-4e2c-9146-\
+daa1698695b8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Framed", "@", 
+  RowBox[{"Text", "[", 
+   RowBox[{"Style", "[", 
+    RowBox[{
+    "\"\<W automacie kom\[OAcute]rkowym dwa sko\:0144czone wzory s\:0105 bli\
+\:017aniakami, je\:015bli jeden mo\:017cna zast\:0105pi\[CAcute] drugim, \
+gdziekolwiek si\:0119 pojawi, bez zmiany przysz\[LSlash]ych konfiguracji. \
+\>\"", ",", 
+     RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.793387290605359*^9, 3.793387295427224*^9}},
+ CellLabel->"In[4]:=",ExpressionUUID->"1e3ca403-aada-492a-b459-712e58d935cc"],
+
+Cell[BoxData[
+ FrameBox[
+  InterpretationBox[Cell[BoxData[
+    FormBox[
+     StyleBox["\<\"W automacie kom\[OAcute]rkowym dwa sko\:0144czone wzory s\
+\:0105 bli\:017aniakami, je\:015bli jeden mo\:017cna zast\:0105pi\[CAcute] \
+drugim, gdziekolwiek si\:0119 pojawi, bez zmiany przysz\[LSlash]ych \
+konfiguracji. \"\>",
+      StripOnInput->False,
+      TextAlignment->Center], TextForm]], "InlineText",ExpressionUUID->
+    "9f178359-1c25-48ed-93f5-43b86c77cf44"],
+   Text[
+    Style[
+    "W automacie kom\[OAcute]rkowym dwa sko\:0144czone wzory s\:0105 \
+bli\:017aniakami, je\:015bli jeden mo\:017cna zast\:0105pi\[CAcute] drugim, \
+gdziekolwiek si\:0119 pojawi, bez zmiany przysz\[LSlash]ych konfiguracji. ", 
+     TextAlignment -> Center]]],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{3.793387262668648*^9, 3.793387297279282*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"c8953d30-f41d-4937-8e5c-834645f16492"]
+}, Open  ]],
+
+Cell["\<\
+Teraz mo\:017cemy sformu\[LSlash]owa\[CAcute] twierdzenie o ogrodach edenu:
+\
+\>", "Text",
+ CellChangeTimes->{{3.793387358466411*^9, 
+  3.7933873803636837`*^9}},ExpressionUUID->"e9880944-b995-424e-9d30-\
+020e01cefe35"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Framed", "@", 
+  RowBox[{"Text", "[", 
+   RowBox[{"Style", "[", 
+    RowBox[{
+    "\"\<Automat kom\[OAcute]rkowy posiada Ogr\[OAcute]d Edenu wtedy i tylko \
+wtedy gdy posiadania konstrukcje bli\:017aniak\[OAcute]w.\>\"", ",", 
+     RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.793387387015737*^9, 3.7933874101734867`*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"d62f48af-ffd0-4a03-8770-bfa4444bf5f5"],
+
+Cell[BoxData[
+ FrameBox[
+  InterpretationBox[Cell[BoxData[
+    FormBox[
+     StyleBox["\<\"Automat kom\[OAcute]rkowy posiada Ogr\[OAcute]d Edenu \
+wtedy i tylko wtedy gdy posiadania konstrukcje bli\:017aniak\[OAcute]w.\"\>",
+      StripOnInput->False,
+      TextAlignment->Center], TextForm]], "InlineText",ExpressionUUID->
+    "da0a33ca-dd78-4981-bf79-db5455d26035"],
+   Text[
+    Style[
+    "Automat kom\[OAcute]rkowy posiada Ogr\[OAcute]d Edenu wtedy i tylko \
+wtedy gdy posiadania konstrukcje bli\:017aniak\[OAcute]w.", TextAlignment -> 
+     Center]]],
+  StripOnInput->False]], "Output",
+ CellChangeTimes->{3.793387413817486*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"b5e3d622-3559-4c55-ad58-80e4b568afc3"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1853, 1018},
+WindowMargins->{{1, Automatic}, {1, Automatic}},
+Magnification:>1.5 Inherited,
+FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 213, 7, 240, "Title",ExpressionUUID->"cf2df73b-0ad1-4e11-bde6-b1e0c873c534"],
+Cell[796, 31, 1015, 25, 150, "Input",ExpressionUUID->"9845277c-1704-4446-8899-cf65d68da00b"],
+Cell[CellGroupData[{
+Cell[1836, 60, 181, 3, 82, "Subsection",ExpressionUUID->"95499120-cfe2-4447-8812-b26d3e9c0239"],
+Cell[CellGroupData[{
+Cell[2042, 67, 172, 3, 69, "Subsubsection",ExpressionUUID->"f2064229-9923-4ca1-8589-641c0130d894"],
+Cell[CellGroupData[{
+Cell[2239, 74, 1014, 22, 89, "Input",ExpressionUUID->"6f7e6487-7e1a-4e53-bd93-a707cf1be13a"],
+Cell[3256, 98, 1247, 24, 69, "Output",ExpressionUUID->"292caa14-40c1-4857-9164-f47c889eadaa"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4552, 128, 161, 3, 69, "Subsubsection",ExpressionUUID->"7795bfd0-700e-4e29-a60a-5b168cd14b2e"],
+Cell[4716, 133, 787, 13, 90, "Text",ExpressionUUID->"f116faa6-b67e-4d52-832d-89d7c84a3f5f"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5552, 152, 154, 3, 82, "Subsection",ExpressionUUID->"379e400e-3791-4ae0-aa95-41f099058042"],
+Cell[CellGroupData[{
+Cell[5731, 159, 160, 3, 69, "Subsubsection",ExpressionUUID->"05c0d13c-ec6c-4cad-978b-19006c226ea0"],
+Cell[5894, 164, 269, 6, 54, "Text",ExpressionUUID->"3adc5de9-48d9-4955-aca9-8dc41947e088"],
+Cell[CellGroupData[{
+Cell[6188, 174, 560, 11, 197, "Input",ExpressionUUID->"26f07b19-cefb-442f-a55a-ad242fd2ab08"],
+Cell[6751, 187, 973, 20, 69, "Output",ExpressionUUID->"c631c225-9eb5-42f7-82e7-1146f5a881ed"]
+}, Open  ]],
+Cell[7739, 210, 455, 9, 90, "Text",ExpressionUUID->"4069eb60-eb1f-428c-87c0-46227df055cb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8231, 224, 227, 4, 69, "Subsubsection",ExpressionUUID->"bf51baf7-c189-4b44-a239-3f49c28360e4"],
+Cell[CellGroupData[{
+Cell[8483, 232, 787, 18, 47, "Input",ExpressionUUID->"2879bed7-a4f4-40a1-bf00-3ab96677870b"],
+Cell[9273, 252, 2238, 44, 161, "Output",ExpressionUUID->"7edf286f-c3b6-4331-bf1e-ebeaa09919da"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11572, 303, 162, 3, 82, "Subsection",ExpressionUUID->"4a71e470-78f9-40f2-9930-8d055be20bf0"],
+Cell[CellGroupData[{
+Cell[11759, 310, 161, 3, 69, "Subsubsection",ExpressionUUID->"1b3f0c88-9d02-4ce9-a068-e00aab809333"],
+Cell[CellGroupData[{
+Cell[11945, 317, 499, 11, 89, "Input",ExpressionUUID->"85a5244a-2f12-4c0a-802f-49e7a47a8083"],
+Cell[12447, 330, 837, 18, 69, "Output",ExpressionUUID->"a3dc101d-2e24-40e1-9a0e-92ac0dddd7d5"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13333, 354, 245, 4, 69, "Subsubsection",ExpressionUUID->"ed263623-067e-4470-85c7-c07d3519189a"],
+Cell[CellGroupData[{
+Cell[13603, 362, 530, 11, 197, "Input",ExpressionUUID->"802aafbc-f4dd-4d1b-8ea5-e0c56b539c8e"],
+Cell[14136, 375, 897, 18, 69, "Output",ExpressionUUID->"a9fa89d7-92f0-4818-bafd-c78477ca8a17"]
+}, Open  ]],
+Cell[15048, 396, 1081, 17, 161, "Text",ExpressionUUID->"a62101c6-92a1-4659-a9d5-39cb14e50656"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16166, 418, 319, 7, 69, "Subsubsection",ExpressionUUID->"1aa49739-5911-4518-9e24-63cf163e7031"],
+Cell[CellGroupData[{
+Cell[16510, 429, 631, 16, 47, "Input",ExpressionUUID->"c917630e-16ed-46a4-baad-96b549fcc6ff"],
+Cell[17144, 447, 2217, 43, 161, "Output",ExpressionUUID->"841ebbbf-5344-43d4-b936-99d74ef61300"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19410, 496, 160, 3, 69, "Subsubsection",ExpressionUUID->"d0981f00-3dde-4112-b425-c9493d2e8a46"],
+Cell[19573, 501, 411, 10, 54, "Text",ExpressionUUID->"4d727f67-cb26-4947-80e7-d038329df944"],
+Cell[CellGroupData[{
+Cell[20009, 515, 494, 11, 51, "Input",ExpressionUUID->"5e684de6-afd1-43cd-8004-158d1f524243"],
+Cell[20506, 528, 755, 17, 69, "Output",ExpressionUUID->"5afdf731-d948-4a54-94a5-32a67a176707"]
+}, Open  ]],
+Cell[21276, 548, 766, 15, 125, "Text",ExpressionUUID->"81405c98-dde9-416d-b180-26ed49eda57d"],
+Cell[CellGroupData[{
+Cell[22067, 567, 885, 22, 47, "Input",ExpressionUUID->"e3a920b3-90a1-40ac-8923-8ed0c7cc2242"],
+Cell[22955, 591, 2227, 43, 161, "Output",ExpressionUUID->"df98560d-591e-408c-9c5c-7032f6a1bc6a"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[25243, 641, 156, 3, 82, "Subsection",ExpressionUUID->"747daa40-7da8-4838-9eb2-48d1f5db99e0"],
+Cell[CellGroupData[{
+Cell[25424, 648, 160, 3, 69, "Subsubsection",ExpressionUUID->"0f0c1e68-fc80-4693-83d3-c658c6903559"],
+Cell[CellGroupData[{
+Cell[25609, 655, 689, 14, 89, "Input",ExpressionUUID->"e8284c8b-4841-4340-9f08-343263ff2a41"],
+Cell[26301, 671, 892, 18, 69, "Output",ExpressionUUID->"7fb44b99-8481-45c6-b8fd-41a2e460dcca"]
+}, Open  ]],
+Cell[27208, 692, 802, 16, 90, "Text",ExpressionUUID->"400bea12-d69c-4394-b32d-badf44af5a30"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28047, 713, 169, 3, 69, "Subsubsection",ExpressionUUID->"5adbb20a-c526-40bd-8686-644b7d30cc5c"],
+Cell[CellGroupData[{
+Cell[28241, 720, 812, 21, 47, "Input",ExpressionUUID->"e795f9be-b284-46a7-85a0-fa7b09814521"],
+Cell[29056, 743, 2121, 41, 161, "Output",ExpressionUUID->"f2ef49a4-4a70-47f2-8282-7440322d4497"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31238, 791, 136, 3, 82, "Subsection",ExpressionUUID->"62cb43f4-b12a-4fb6-80a8-706e7983db4e"],
+Cell[CellGroupData[{
+Cell[31399, 798, 211, 4, 69, "Subsubsection",ExpressionUUID->"7bcffa90-6513-4d86-965f-7f0aafdc1905"],
+Cell[CellGroupData[{
+Cell[31635, 806, 837, 16, 198, "Input",ExpressionUUID->"76b3f42a-3ada-4c9d-b523-96f6e860a4be"],
+Cell[32475, 824, 1288, 25, 71, "Output",ExpressionUUID->"775e639d-7c76-42a4-9a08-e8e1ec842db9"]
+}, Open  ]],
+Cell[33778, 852, 791, 16, 90, "Text",ExpressionUUID->"daf17302-63b0-4751-a8e3-ddc300dffc9c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34606, 873, 169, 3, 69, "Subsubsection",ExpressionUUID->"b8b44e47-912a-4802-8192-8896627b1b9e"],
+Cell[34778, 878, 385, 8, 90, "Text",ExpressionUUID->"ebbde0e1-2f17-4474-a672-fc640342f1a4"],
+Cell[CellGroupData[{
+Cell[35188, 890, 3539, 80, 218, "Input",ExpressionUUID->"d8926858-6824-4792-9f34-145c92324512"],
+Cell[38730, 972, 2150, 42, 161, "Output",ExpressionUUID->"e3f22a98-8438-46dc-8a4e-3cd63632f238"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40929, 1020, 161, 3, 69, "Subsubsection",ExpressionUUID->"91bcc837-9a6b-47ca-bdca-611054c549d3"],
+Cell[41093, 1025, 541, 10, 90, "Text",ExpressionUUID->"672f9ecb-62d5-48f9-ba7b-6b29190e06ae"],
+Cell[CellGroupData[{
+Cell[41659, 1039, 495, 11, 116, "Input",ExpressionUUID->"20eec8a7-462d-4000-9328-8175c4545d83"],
+Cell[42157, 1052, 684, 15, 69, "Output",ExpressionUUID->"dd74fb6f-8ce3-407a-a74e-d429b8f2999f"]
+}, Open  ]],
+Cell[42856, 1070, 858, 17, 125, "Text",ExpressionUUID->"bae24125-230c-4f5c-a6e1-f07817074a9a"],
+Cell[CellGroupData[{
+Cell[43739, 1091, 424, 10, 47, "Input",ExpressionUUID->"398f15a7-ee84-47af-b578-c82394a47c2b"],
+Cell[44166, 1103, 592, 15, 69, "Output",ExpressionUUID->"ad619b15-a4c5-45d7-9f34-5aa1f953b53c"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[44807, 1124, 178, 3, 69, "Subsubsection",ExpressionUUID->"407065bf-fe8d-44dd-9259-32c701b089c5"],
+Cell[44988, 1129, 254, 4, 54, "Text",ExpressionUUID->"6e82b8f0-0566-4e2c-9146-daa1698695b8"],
+Cell[CellGroupData[{
+Cell[45267, 1137, 572, 12, 197, "Input",ExpressionUUID->"1e3ca403-aada-492a-b459-712e58d935cc"],
+Cell[45842, 1151, 918, 19, 69, "Output",ExpressionUUID->"c8953d30-f41d-4937-8e5c-834645f16492"]
+}, Open  ]],
+Cell[46775, 1173, 228, 6, 90, "Text",ExpressionUUID->"e9880944-b995-424e-9d30-020e01cefe35"],
+Cell[CellGroupData[{
+Cell[47028, 1183, 481, 10, 89, "Input",ExpressionUUID->"d62f48af-ffd0-4a03-8770-bfa4444bf5f5"],
+Cell[47512, 1195, 712, 16, 69, "Output",ExpressionUUID->"b5e3d622-3559-4c55-ad58-80e4b568afc3"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
