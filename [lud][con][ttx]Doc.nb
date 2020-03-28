@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    152113,       3258]
-NotebookOptionsPosition[    145301,       3139]
-NotebookOutlinePosition[    145672,       3155]
-CellTagsIndexPosition[    145629,       3152]
+NotebookDataLength[    152696,       3261]
+NotebookOptionsPosition[    145890,       3142]
+NotebookOutlinePosition[    146253,       3158]
+CellTagsIndexPosition[    146210,       3155]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -48,15 +48,15 @@ Cell["Charakteryzacja i definicje", "Subsection",
 
 Cell["\<\
 Automaty kom\[OAcute]rkowe s\:0105 dyskretnymi modelami rozwa\:017canymi mi\
-\:0119dzy innymi w informatyce, matematyce i fizyce, sk\[LSlash]\:0105daj\
-\:0105cymi si\:0119 z regularnej siatki o sko\:0144czonym wymiarze, kt\
-\[OAcute]ra sk\[LSlash]ada si\:0119 z kom\[OAcute]rek, z kt\[OAcute]rych ka\
-\:017cda mo\:017ce by\[CAcute] w jednym z okre\:015blonych stan\[OAcute]w (kt\
-\[OAcute]rych pula jest sko\:0144czona).\
+\:0119dzy innymi w informatyce, matematyce i fizyce, \
+sk\[LSlash]adaj\:0105cymi si\:0119 z regularnej siatki o sko\:0144czonym \
+wymiarze, kt\[OAcute]ra sk\[LSlash]ada si\:0119 z kom\[OAcute]rek, z kt\
+\[OAcute]rych ka\:017cda mo\:017ce by\[CAcute] w jednym z okre\:015blonych \
+stan\[OAcute]w (kt\[OAcute]rych pula jest sko\:0144czona).\
 \>", "Text",
  CellChangeTimes->{{3.791733704577221*^9, 3.791733779673332*^9}, {
-  3.791734133105307*^9, 3.791734178065288*^9}, {3.7917345201529493`*^9, 
-  3.79173454221695*^9}},
+   3.791734133105307*^9, 3.791734178065288*^9}, {3.7917345201529493`*^9, 
+   3.79173454221695*^9}, 3.794397424152966*^9},
  TranslationOptions->{"Language"->"Polish"},
  LanguageCategory->"NaturalLanguage",
  DefaultNaturalLanguage->
@@ -75,14 +75,15 @@ po\[LSlash]o\:017conych w okre\:015blony spos\[OAcute]b wzgl\:0119dem niej.\
 
 Cell["\<\
 Dla automatu kom\[OAcute]rkowego definiujemy stan pocz\:0105tkowy poprzez \
-okreslenie stanu kazdej z kom\[OAcute]rek. Natomiast nowa generacja kom\
-\[OAcute]rek powstaje poprzez zastosowanie okre\:015blonej regu\[LSlash]y w \
-postaci funkcji matematycznej, kt\[OAcute]ra okre\:015bla nowy stan \
+okre\:015blenie stanu ka\:017cdej z kom\[OAcute]rek. Natomiast nowa generacja \
+kom\[OAcute]rek powstaje poprzez zastosowanie okre\:015blonej regu\[LSlash]y \
+w postaci funkcji matematycznej, kt\[OAcute]ra okre\:015bla nowy stan \
 ka\:017cdej z kom\[OAcute]rek an podstawie stanu kom\[OAcute]rek w jej \
 s\:0105siedztwie.\
 \>", "Text",
  CellChangeTimes->{{3.7917346318798447`*^9, 3.791734720424518*^9}, {
-  3.791734869984283*^9, 3.7917349434365187`*^9}},
+  3.791734869984283*^9, 3.7917349434365187`*^9}, {3.794397435265094*^9, 
+  3.794397439432386*^9}},
  TranslationOptions->{"Language"->"Polish"},
  LanguageCategory->"NaturalLanguage",
  DefaultNaturalLanguage->
@@ -112,13 +113,12 @@ matematyka Johna von Neumann\[CloseCurlyQuote]a. \
   "Polish",ExpressionUUID->"e5d8fbf3-bcef-437f-ada7-a7703cf347e1"],
 
 Cell["\<\
-Dopero jednak a latach 70-tych,  kiedy powsta\[LSlash]a \
+Dopiero jednak a latach 70-tych,  kiedy powsta\[LSlash]a \
 \[OpenCurlyDoubleQuote]Gra w \:017cycie\[CloseCurlyDoubleQuote], automaty kom\
-\[OAcute]rkowe op\[OAcute]\:015bci\[LSlash]y jedynie \:015brodowisko \
-akademickie.\
+\[OAcute]rkowe opu\:015bci\[LSlash]y jedynie \:015brodowisko akademickie.\
 \>", "Text",
  CellChangeTimes->{{3.7917367172446632`*^9, 3.7917367974226007`*^9}, 
-   3.791736838425981*^9},
+   3.791736838425981*^9, {3.794397451953392*^9, 3.794397455584844*^9}},
  TranslationOptions->{"Language"->"Polish"},
  LanguageCategory->"NaturalLanguage",
  DefaultNaturalLanguage->
@@ -128,11 +128,11 @@ Cell["\<\
 W latach 80-tych do grona badaczy nad automatami kom\[OAcute]rkowymi do\
 \[LSlash]\:0105czy\[LSlash] Wolfram (tw\[OAcute]rca Mathematici), \
 kt\[OAcute]ry wraz z Matthew Cook\[CloseCurlyQuote]iem \
-dowi\[OAcute]d\[LSlash] kompletno\:015bci Turiunga tych automat\[OAcute]w.\
+dowi\[OAcute]d\[LSlash] kompletno\:015bci Turinga tych automat\[OAcute]w.\
 \>", "Text",
  CellChangeTimes->{{3.791736849380468*^9, 3.791736968756646*^9}, {
-  3.79183257884042*^9, 3.791832605543748*^9}, {3.792079031727778*^9, 
-  3.792079031831759*^9}},
+   3.79183257884042*^9, 3.791832605543748*^9}, {3.792079031727778*^9, 
+   3.792079031831759*^9}, 3.794397466730341*^9},
  TranslationOptions->{"Language"->"Polish"},
  LanguageCategory->"NaturalLanguage",
  DefaultNaturalLanguage->
@@ -245,8 +245,8 @@ wszystkie 8 kom\[OAcute]rek przylegaj\:0105ce do danej bokami lub rogami. Ka\
 rodzi si\:0119, wtedy i tylko wtedy gdy ma dok\[LSlash]adnie 3 \:017cywych s\
 \:0105siad\[OAcute]w, natomiast kom\[OAcute]rka \:017cywa pozostaje \:017cywa \
 wtedy i tylko wtedy gdy ma 2 lub 3 \:017cywych s\:0105siad\[OAcute]w, w \
-przypadku innej liczby umiera. W Mathematice regu\[LSlash]e t\:0119 \
-mo\:017cna zdefiniowa\[CAcute] w nast\:0119puj\:0105cy spos\[OAcute]b, tak by \
+przypadku innej liczby umiera. W Mathematice regu\[LSlash]\:0119 t\:0119 mo\
+\:017cna zdefiniowa\[CAcute] w nast\:0119puj\:0105cy spos\[OAcute]b, tak by \
 by\[LSlash]a prawid\[LSlash]owo interpretowana przez dost\:0119pn\:0105 w \
 Mathematice funkcje CellurarAutomaton\
 \>", "Text",
@@ -254,7 +254,7 @@ Mathematice funkcje CellurarAutomaton\
    3.791739445632656*^9, 3.7917395946597233`*^9}, {3.791831709942276*^9, 
    3.791831712412355*^9}, {3.791831761024569*^9, 3.791831782287612*^9}, {
    3.79204812379169*^9, 3.792048170066533*^9}, 3.7920753285613327`*^9, 
-   3.792121181230528*^9},
+   3.792121181230528*^9, {3.794397487386285*^9, 3.794397487779813*^9}},
  TranslationOptions->{"Language"->"Polish"},
  LanguageCategory->"NaturalLanguage",
  DefaultNaturalLanguage->
@@ -302,7 +302,7 @@ Cell["\<\
 Na pocz\:0105tku zale\:017cy wyr\[OAcute]\:017cni\[CAcute] dwa sposoby \
 uwaluacji generacji kom\[OAcute]rek: w pierwszej z nich (\
 \[OpenCurlyDoubleQuote]TotalisticCode\[CloseCurlyDoubleQuote]) bierzemy pod \
-uwag\:0119 wszystkie kom\[OAcute]rki to jest s\:0105siedzi + kom\[OAcute]rka \
+uwag\:0119 wszystkie kom\[OAcute]rki, to jest s\:0105siedzi + kom\[OAcute]rka \
 ewoluuj\:0105ca, natomiast w drugiej \
 (\[OpenCurlyDoubleQuote]OuterTotalisticCode\[CloseCurlyDoubleQuote]) pod uwag\
 \:0119 bierzemy oddzielnie s\:0105siad\[OAcute]w kom\[OAcute]rki i dan\:0105 \
@@ -319,7 +319,7 @@ by\[LSlash] \:017cywy lub by\[LSlash]a martwa i 2 jej s\:0105siad\[OAcute]w \
 by\[LSlash]o \:017cywych.\
 \>", "Text",
  CellChangeTimes->{{3.792059949013493*^9, 3.792060071144228*^9}, {
-  3.792071400857792*^9, 3.792071611219119*^9}},
+   3.792071400857792*^9, 3.792071611219119*^9}, 3.7943975055111723`*^9},
  TranslationOptions->{"Language"->"Polish"},
  LanguageCategory->"NaturalLanguage",
  DefaultNaturalLanguage->
@@ -560,7 +560,7 @@ Cell[BoxData[
 }, Open  ]],
 
 Cell[TextData[{
- "jako \:017ce przy generowaniu w Mathematice wszystkich uporz\:0105dkowanych \
+ "Jako \:017ce przy generowaniu w Mathematice wszystkich uporz\:0105dkowanych \
 tr\[OAcute]jek zer i jedynek dostaniemy wynik w\[LSlash]a\:015bnie z \
 tak\:0105 kolejno\:015bci\:0105, a za pomoc\:0105 ",
  Cell[BoxData[
@@ -575,7 +575,7 @@ tak\:0105 kolejno\:015bci\:0105, a za pomoc\:0105 ",
 }], "Text",
  CellChangeTimes->{{3.792060335730967*^9, 3.792060367561268*^9}, {
   3.7920604341588306`*^9, 3.792060442270969*^9}, {3.792060501020145*^9, 
-  3.792060541905539*^9}},
+  3.792060541905539*^9}, {3.7943975423730288`*^9, 3.7943975426212807`*^9}},
  TranslationOptions->{"Language"->"Polish"},
  LanguageCategory->"NaturalLanguage",
  DefaultNaturalLanguage->
@@ -1152,15 +1152,15 @@ jDHGGGOMMcYYY4wxxhhjjDHG+Cf4Bxy5uX8=
 }, Open  ]],
 
 Cell["\<\
-Pierwszym z nich jest jest s\:0105siedztwo Moore\[CloseCurlyQuote]a, w kt\
-\[OAcute]rym kom\[OAcute]rka s\:0105siaduje ze wszystkimi 8 kom\[OAcute]rkami \
-dooko\[LSlash]a siebie. Opr\[OAcute]cz tego wyr\[OAcute]\:017cniamy \
-r\[OAcute]wnie\:017c s\:0105siedztwo von Neumanna, kt\[OAcute]re obejmuje 4 \
-kom\[OAcute]rki, a w wersji rozszerzonej 8.\
+Pierwszym z nich jest s\:0105siedztwo Moore\[CloseCurlyQuote]a, w \
+kt\[OAcute]rym kom\[OAcute]rka s\:0105siaduje ze wszystkimi 8 \
+kom\[OAcute]rkami dooko\[LSlash]a siebie. Opr\[OAcute]cz tego wyr\[OAcute]\
+\:017cniamy r\[OAcute]wnie\:017c s\:0105siedztwo von Neumanna, kt\[OAcute]re \
+obejmuje 4 kom\[OAcute]rki, a w wersji rozszerzonej 8.\
 \>", "Text",
  CellChangeTimes->{{3.792057415651689*^9, 3.79205751670063*^9}, {
   3.7920575696497726`*^9, 3.792057590160043*^9}, {3.7920769216085997`*^9, 
-  3.792076933724566*^9}},
+  3.792076933724566*^9}, {3.794397563631381*^9, 3.7943975640376797`*^9}},
  TranslationOptions->{"Language"->"Polish"},
  LanguageCategory->"NaturalLanguage",
  DefaultNaturalLanguage->
@@ -1168,16 +1168,16 @@ kom\[OAcute]rki, a w wersji rozszerzonej 8.\
 
 Cell["\<\
 Zatem chc\:0105c wyja\:015bni\[CAcute] znaczenie wy\:017cej zdefiniowanej  \
-zasady gry w \:017cycie (GoLRule) potrzebne jest zrozumienie pierwszej jej cz\
-\:0119\:015bci - kodu reprezentuj\:0105cego ewaluacj\:0119 kom\[OAcute]rki do \
-nast\:0119pnej generacji w s\:0105siedztwie 8 kom\[OAcute]rek (Moore\
+zasady gry w \:017cycie (GoLRule), potrzebne jest zrozumienie pierwszej jej \
+cz\:0119\:015bci - kodu reprezentuj\:0105cego ewaluacj\:0119 kom\[OAcute]rki \
+do nast\:0119pnej generacji w s\:0105siedztwie 8 kom\[OAcute]rek (Moore\
 \[CloseCurlyQuote]a).\
 \>", "Text",
  CellChangeTimes->{{3.7920575992196093`*^9, 3.792057603120151*^9}, {
    3.792057721308844*^9, 3.7920577976691628`*^9}, {3.792060641130229*^9, 
    3.7920606945290813`*^9}, {3.7920608134287777`*^9, 3.792060834589273*^9}, {
    3.792060958887418*^9, 3.792061007383616*^9}, 3.792066288642536*^9, 
-   3.7920769413592052`*^9},
+   3.7920769413592052`*^9, 3.794397574734885*^9},
  TranslationOptions->{"Language"->"Polish"},
  LanguageCategory->"NaturalLanguage",
  DefaultNaturalLanguage->
@@ -1951,11 +1951,11 @@ Cell["\<\
 Ewolucja automatu kom\[OAcute]rkowego z przyj\:0119ciem zasad gry w \
 \:017cycie uwidacznia kilka charakterystycznych typ\[OAcute]w struktur, kt\
 \[OAcute]re mo\:017cna podzieli\[CAcute] w nast\:0119puj\:0105cy \
-spos\[OAcute]b\
+spos\[OAcute]b.\
 \>", "Text",
  CellChangeTimes->{{3.792121463791909*^9, 3.792121507184732*^9}, {
-  3.792121540744905*^9, 
-  3.792121629337791*^9}},ExpressionUUID->"1ff5a811-c3a4-4ee7-a8de-\
+   3.792121540744905*^9, 3.792121629337791*^9}, 
+   3.794397603057417*^9},ExpressionUUID->"1ff5a811-c3a4-4ee7-a8de-\
 ba22d6a7f3f3"],
 
 Cell[CellGroupData[{
@@ -1968,11 +1968,11 @@ a02931728c01"],
 Cell["\<\
 Przyk\[LSlash]adami struktur niezmiennych, to jest takich, w kt\[OAcute]rych \
 w ka\:017cdej generacji te same kom\[OAcute]rki s\:0105 \:017cywe, s\:0105 \
-klocek, ul, bochenek, \[LSlash]\[OAcute]d\:017a, kad\:017a\
+klocek, ul, bochenek, \[LSlash]\[OAcute]d\:017a, kad\:017a.\
 \>", "Text",
  CellChangeTimes->{{3.7921225888301373`*^9, 3.792122650645071*^9}, {
-  3.7921227480065413`*^9, 
-  3.7921227921185207`*^9}},ExpressionUUID->"03b8eb75-db94-4d97-a4e1-\
+   3.7921227480065413`*^9, 3.7921227921185207`*^9}, 
+   3.794397610864925*^9},ExpressionUUID->"03b8eb75-db94-4d97-a4e1-\
 3eaaf61eb195"],
 
 Cell[CellGroupData[{
@@ -2062,7 +2062,7 @@ Cell[BoxData[
         Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
         "\"untitled\"", Typeset`specs$$ = {{
           Hold[$CellContext`n$$], 1, 61, 1}}, Typeset`size$$ = {
-        220., {103., 117.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+        541.484375, {205., 30.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
         Typeset`skipInitDone$$ = True, $CellContext`n$72349$$ = 0}, 
         DynamicBox[Manipulate`ManipulateBoxes[
          1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
@@ -2087,7 +2087,7 @@ Cell[BoxData[
             DefaultBaseStyle -> "Animate", DefaultLabelStyle -> 
             "AnimateLabel", SynchronousUpdating -> True, ShrinkingDelay -> 
             10.}, "DefaultOptions" :> {}],
-         ImageSizeCache->{712., {177., 191.}},
+         ImageSizeCache->{712., {186., 200.}},
          SingleEvaluation->True],
         Deinitialization:>None,
         DynamicModuleValues:>{},
@@ -2106,7 +2106,7 @@ Cell[BoxData[
         Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
         "\"untitled\"", Typeset`specs$$ = {{
           Hold[$CellContext`n$$], 1, 61, 1}}, Typeset`size$$ = {
-        220., {77., 91.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+        541.484375, {205., 30.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
         Typeset`skipInitDone$$ = True, $CellContext`n$72366$$ = 0}, 
         DynamicBox[Manipulate`ManipulateBoxes[
          1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
@@ -2131,7 +2131,7 @@ Cell[BoxData[
             DefaultBaseStyle -> "Animate", DefaultLabelStyle -> 
             "AnimateLabel", SynchronousUpdating -> True, ShrinkingDelay -> 
             10.}, "DefaultOptions" :> {}],
-         ImageSizeCache->{712., {151., 165.}},
+         ImageSizeCache->{1440., {186., 200.}},
          SingleEvaluation->True],
         Deinitialization:>None,
         DynamicModuleValues:>{},
@@ -2150,7 +2150,7 @@ Cell[BoxData[
         Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
         "\"untitled\"", Typeset`specs$$ = {{
           Hold[$CellContext`n$$], 1, 61, 1}}, Typeset`size$$ = {
-        220., {103., 117.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+        1131., {58., 30.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
         Typeset`skipInitDone$$ = True, $CellContext`n$72383$$ = 0}, 
         DynamicBox[Manipulate`ManipulateBoxes[
          1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
@@ -2175,7 +2175,7 @@ Cell[BoxData[
             DefaultBaseStyle -> "Animate", DefaultLabelStyle -> 
             "AnimateLabel", SynchronousUpdating -> True, ShrinkingDelay -> 
             10.}, "DefaultOptions" :> {}],
-         ImageSizeCache->{712., {177., 191.}},
+         ImageSizeCache->{1440., {185., 199.}},
          SingleEvaluation->True],
         Deinitialization:>None,
         DynamicModuleValues:>{},
@@ -2194,7 +2194,7 @@ Cell[BoxData[
         Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
         "\"untitled\"", Typeset`specs$$ = {{
           Hold[$CellContext`n$$], 1, 61, 1}}, Typeset`size$$ = {
-        220., {103., 117.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+        1131., {58., 30.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
         Typeset`skipInitDone$$ = True, $CellContext`n$72400$$ = 0}, 
         DynamicBox[Manipulate`ManipulateBoxes[
          1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
@@ -2219,7 +2219,7 @@ Cell[BoxData[
             DefaultBaseStyle -> "Animate", DefaultLabelStyle -> 
             "AnimateLabel", SynchronousUpdating -> True, ShrinkingDelay -> 
             10.}, "DefaultOptions" :> {}],
-         ImageSizeCache->{712., {177., 191.}},
+         ImageSizeCache->{1440., {185., 199.}},
          SingleEvaluation->True],
         Deinitialization:>None,
         DynamicModuleValues:>{},
@@ -2238,7 +2238,7 @@ Cell[BoxData[
         Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
         "\"untitled\"", Typeset`specs$$ = {{
           Hold[$CellContext`n$$], 1, 61, 1}}, Typeset`size$$ = {
-        220., {103., 117.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+        1131., {58., 30.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
         Typeset`skipInitDone$$ = True, $CellContext`n$72417$$ = 0}, 
         DynamicBox[Manipulate`ManipulateBoxes[
          1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
@@ -2263,7 +2263,7 @@ Cell[BoxData[
             DefaultBaseStyle -> "Animate", DefaultLabelStyle -> 
             "AnimateLabel", SynchronousUpdating -> True, ShrinkingDelay -> 
             10.}, "DefaultOptions" :> {}],
-         ImageSizeCache->{712., {177., 191.}},
+         ImageSizeCache->{1440., {185., 199.}},
          SingleEvaluation->True],
         Deinitialization:>None,
         DynamicModuleValues:>{},
@@ -2292,14 +2292,15 @@ Cell["Oscylatory", "Subsubsection",
 cdbe307099bf"],
 
 Cell["\<\
-Przyk\[LSlash]ad\:017cabka, ami uk\[LSlash]ad\[OAcute]w oscyluj\:0105cych w \
+Przyk\[LSlash]adami uk\[LSlash]ad\[OAcute]w oscyluj\:0105cych w \
 \[OpenCurlyDoubleQuote]grze w \:017cycie\[CloseCurlyDoubleQuote] s\:0105 \
 \:015bwiat\[LSlash]a uliczne, \:017cabka, latarnia morska, pulsar i \
 pentadekatlon\
 \>", "Text",
  CellChangeTimes->{{3.7921229378293667`*^9, 3.792122981422769*^9}, {
-  3.79212311752351*^9, 3.792123149653338*^9}, {3.792123244693874*^9, 
-  3.792123255438284*^9}},ExpressionUUID->"f87edd2b-5df4-4dd5-b098-\
+   3.79212311752351*^9, 3.792123149653338*^9}, {3.792123244693874*^9, 
+   3.792123255438284*^9}, 
+   3.7943976288093348`*^9},ExpressionUUID->"f87edd2b-5df4-4dd5-b098-\
 a1fff116daea"],
 
 Cell[CellGroupData[{
@@ -2483,7 +2484,7 @@ Cell[BoxData[
         Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
         "\"untitled\"", Typeset`specs$$ = {{
           Hold[$CellContext`n$$], 1, 61, 1}}, Typeset`size$$ = {
-        220., {103., 117.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+        541.484375, {205., 30.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
         Typeset`skipInitDone$$ = True, $CellContext`n$71880$$ = 0}, 
         DynamicBox[Manipulate`ManipulateBoxes[
          1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
@@ -2508,7 +2509,7 @@ Cell[BoxData[
             DefaultBaseStyle -> "Animate", DefaultLabelStyle -> 
             "AnimateLabel", SynchronousUpdating -> True, ShrinkingDelay -> 
             10.}, "DefaultOptions" :> {}],
-         ImageSizeCache->{712., {177., 191.}},
+         ImageSizeCache->{712., {186., 200.}},
          SingleEvaluation->True],
         Deinitialization:>None,
         DynamicModuleValues:>{},
@@ -2527,7 +2528,7 @@ Cell[BoxData[
         Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
         "\"untitled\"", Typeset`specs$$ = {{
           Hold[$CellContext`n$$], 1, 61, 1}}, Typeset`size$$ = {
-        220., {103., 117.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+        541.484375, {205., 30.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
         Typeset`skipInitDone$$ = True, $CellContext`n$71897$$ = 0}, 
         DynamicBox[Manipulate`ManipulateBoxes[
          1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
@@ -2552,7 +2553,7 @@ Cell[BoxData[
             DefaultBaseStyle -> "Animate", DefaultLabelStyle -> 
             "AnimateLabel", SynchronousUpdating -> True, ShrinkingDelay -> 
             10.}, "DefaultOptions" :> {}],
-         ImageSizeCache->{712., {177., 191.}},
+         ImageSizeCache->{712., {186., 200.}},
          SingleEvaluation->True],
         Deinitialization:>None,
         DynamicModuleValues:>{},
@@ -2571,7 +2572,7 @@ Cell[BoxData[
         Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
         "\"untitled\"", Typeset`specs$$ = {{
           Hold[$CellContext`n$$], 1, 61, 1}}, Typeset`size$$ = {
-        220., {103., 117.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+        541.484375, {205., 30.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
         Typeset`skipInitDone$$ = True, $CellContext`n$71914$$ = 0}, 
         DynamicBox[Manipulate`ManipulateBoxes[
          1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
@@ -2596,7 +2597,7 @@ Cell[BoxData[
             DefaultBaseStyle -> "Animate", DefaultLabelStyle -> 
             "AnimateLabel", SynchronousUpdating -> True, ShrinkingDelay -> 
             10.}, "DefaultOptions" :> {}],
-         ImageSizeCache->{712., {177., 191.}},
+         ImageSizeCache->{1225., {186., 200.}},
          SingleEvaluation->True],
         Deinitialization:>None,
         DynamicModuleValues:>{},
@@ -2615,7 +2616,7 @@ Cell[BoxData[
         Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
         "\"untitled\"", Typeset`specs$$ = {{
           Hold[$CellContext`n$$], 1, 61, 1}}, Typeset`size$$ = {
-        220., {103., 117.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+        721.484375, {107., 30.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
         Typeset`skipInitDone$$ = True, $CellContext`n$71931$$ = 0}, 
         DynamicBox[Manipulate`ManipulateBoxes[
          1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
@@ -2640,7 +2641,7 @@ Cell[BoxData[
             DefaultBaseStyle -> "Animate", DefaultLabelStyle -> 
             "AnimateLabel", SynchronousUpdating -> True, ShrinkingDelay -> 
             10.}, "DefaultOptions" :> {}],
-         ImageSizeCache->{712., {177., 191.}},
+         ImageSizeCache->{1225., {185., 199.}},
          SingleEvaluation->True],
         Deinitialization:>None,
         DynamicModuleValues:>{},
@@ -2659,7 +2660,7 @@ Cell[BoxData[
         Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
         "\"untitled\"", Typeset`specs$$ = {{
           Hold[$CellContext`n$$], 1, 61, 1}}, Typeset`size$$ = {
-        127., {103., 117.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+        721.484375, {107., 30.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
         Typeset`skipInitDone$$ = True, $CellContext`n$71948$$ = 0}, 
         DynamicBox[Manipulate`ManipulateBoxes[
          1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
@@ -2684,7 +2685,7 @@ Cell[BoxData[
             DefaultBaseStyle -> "Animate", DefaultLabelStyle -> 
             "AnimateLabel", SynchronousUpdating -> True, ShrinkingDelay -> 
             10.}, "DefaultOptions" :> {}],
-         ImageSizeCache->{712., {177., 191.}},
+         ImageSizeCache->{1225., {185., 199.}},
          SingleEvaluation->True],
         Deinitialization:>None,
         DynamicModuleValues:>{},
@@ -2715,12 +2716,13 @@ Cell["Statki", "Subsubsection",
 b5f3207764c8"],
 
 Cell["\<\
-Wsr\[OAcute]d statkow mo\:017cna przede wszystkim wyr\[OAcute]zni\[CAcute] \
-szybowiec oraz statek koszmiczny, kt\[OAcute]re przemieszczaj\:0105 si\:0119 \
-po planszy gry\
+W\:015br\[OAcute]d statk\[OAcute]w mo\:017cna przede wszystkim wyr\[OAcute]\
+\:017cni\[CAcute] szybowiec oraz statek kosmiczny, kt\[OAcute]re \
+przemieszczaj\:0105 si\:0119 po planszy gry\
 \>", "Text",
- CellChangeTimes->{{3.792123512621684*^9, 
-  3.792123566069393*^9}},ExpressionUUID->"892bac25-ba0d-4b3c-b20d-\
+ CellChangeTimes->{{3.792123512621684*^9, 3.792123566069393*^9}, {
+  3.7943976445384827`*^9, 
+  3.794397655801942*^9}},ExpressionUUID->"892bac25-ba0d-4b3c-b20d-\
 0b4d994824e4"],
 
 Cell[CellGroupData[{
@@ -2793,7 +2795,7 @@ Cell[BoxData[
         Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
         "\"untitled\"", Typeset`specs$$ = {{
           Hold[$CellContext`n$$], 1, 61, 1}}, Typeset`size$$ = {
-        220., {103., 117.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+        541.484375, {205., 30.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
         Typeset`skipInitDone$$ = True, $CellContext`n$87302$$ = 0}, 
         DynamicBox[Manipulate`ManipulateBoxes[
          1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
@@ -2818,7 +2820,7 @@ Cell[BoxData[
             DefaultBaseStyle -> "Animate", DefaultLabelStyle -> 
             "AnimateLabel", SynchronousUpdating -> True, ShrinkingDelay -> 
             10.}, "DefaultOptions" :> {}],
-         ImageSizeCache->{712., {177., 191.}},
+         ImageSizeCache->{712., {186., 200.}},
          SingleEvaluation->True],
         Deinitialization:>None,
         DynamicModuleValues:>{},
@@ -2837,7 +2839,7 @@ Cell[BoxData[
         Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
         "\"untitled\"", Typeset`specs$$ = {{
           Hold[$CellContext`n$$], 1, 61, 1}}, Typeset`size$$ = {
-        220., {14., 27.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+        541.484375, {205., 30.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
         Typeset`skipInitDone$$ = True, $CellContext`n$87319$$ = 0}, 
         DynamicBox[Manipulate`ManipulateBoxes[
          1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
@@ -2862,7 +2864,7 @@ Cell[BoxData[
             DefaultBaseStyle -> "Animate", DefaultLabelStyle -> 
             "AnimateLabel", SynchronousUpdating -> True, ShrinkingDelay -> 
             10.}, "DefaultOptions" :> {}],
-         ImageSizeCache->{712., {88., 102.}},
+         ImageSizeCache->{712., {186., 200.}},
          SingleEvaluation->True],
         Deinitialization:>None,
         DynamicModuleValues:>{},
@@ -2892,14 +2894,15 @@ Cell["Pozosta\[LSlash]e", "Subsubsection",
 b113542a311a"],
 
 Cell["\<\
-Ponadto wyr\[OAcute]znia si\:0119 r\[OAcute]wnie\:017c takie struktury jak \
-dzia\[LSlash]a, kt\[OAcute]re \[OpenCurlyDoubleQuote]produkuj\:0105\
+Ponadto wyr\[OAcute]\:017cnia si\:0119 r\[OAcute]wnie\:017c takie struktury \
+jak dzia\[LSlash]a, kt\[OAcute]re \[OpenCurlyDoubleQuote]produkuj\:0105\
 \[CloseCurlyDoubleQuote] nieustannie \[LSlash]adunki (przyk\[LSlash]adem jest \
 s\[LSlash]ynny reprezentant gry \[OpenCurlyDoubleQuote]Gosper Glider Gun\
 \[CloseCurlyDoubleQuote])\
 \>", "Text",
- CellChangeTimes->{{3.792123695205*^9, 
-  3.792123770612896*^9}},ExpressionUUID->"5e81d57c-42fb-4ca2-b54e-\
+ CellChangeTimes->{{3.792123695205*^9, 3.792123770612896*^9}, {
+  3.794397663323118*^9, 
+  3.7943976635381536`*^9}},ExpressionUUID->"5e81d57c-42fb-4ca2-b54e-\
 fbdbcaa264b5"],
 
 Cell[CellGroupData[{
@@ -3029,7 +3032,7 @@ Cell[BoxData[
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`n$$], 1, 121, 1}}, Typeset`size$$ = {
-    220., {71., 84.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    541.484375, {205., 30.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
     Typeset`skipInitDone$$ = True, $CellContext`n$92689$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
@@ -3053,7 +3056,7 @@ Cell[BoxData[
        ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
         "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
         True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
-     ImageSizeCache->{712., {145., 159.}},
+     ImageSizeCache->{2098., {186., 200.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -3096,7 +3099,7 @@ Cell[BoxData[
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
       Hold[$CellContext`n$$], 1, 21, 1}}, Typeset`size$$ = {
-    792., {425., 437.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    486.484375, {58., 30.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
     Typeset`skipInitDone$$ = True, $CellContext`n$48315$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`n$$ = 1}, 
@@ -3117,7 +3120,7 @@ Cell[BoxData[
        ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
         "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
         True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
-     ImageSizeCache->{886., {498., 512.}},
+     ImageSizeCache->{742., {112., 126.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -3137,8 +3140,8 @@ Cell[BoxData[
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{1356, 1738},
-WindowMargins->{{-1362, Automatic}, {-297, Automatic}},
+WindowSize->{927, 1018},
+WindowMargins->{{Automatic, 0}, {0, Automatic}},
 Magnification:>2.2 Inherited,
 FrontEndVersion->"12.0 for Linux x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
@@ -3155,106 +3158,106 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 285, 5, 216, "Title",ExpressionUUID->"0529e279-90fd-4570-9bef-1987329dbad7"],
+Cell[580, 22, 285, 5, 353, "Title",ExpressionUUID->"0529e279-90fd-4570-9bef-1987329dbad7"],
 Cell[CellGroupData[{
 Cell[890, 31, 273, 5, 149, "Section",ExpressionUUID->"89690670-d8a6-4295-ab0f-cb2ffcfc1da3"],
 Cell[CellGroupData[{
 Cell[1188, 40, 321, 6, 121, "Subsection",ExpressionUUID->"23318b66-92d5-4eda-b553-c157b63e9cd9"],
-Cell[1512, 48, 785, 14, 233, "Text",ExpressionUUID->"72ff9b50-dab8-4796-94f3-6c7e75c955dd"],
-Cell[2300, 64, 473, 9, 130, "Text",ExpressionUUID->"ba7e824c-9209-461e-b0f1-1e31630167f1"],
-Cell[2776, 75, 706, 13, 285, "Text",ExpressionUUID->"bced876a-7906-4efe-a3d3-bec9c7fcf70c"]
+Cell[1512, 48, 804, 14, 388, "Text",ExpressionUUID->"72ff9b50-dab8-4796-94f3-6c7e75c955dd"],
+Cell[2319, 64, 473, 9, 182, "Text",ExpressionUUID->"ba7e824c-9209-461e-b0f1-1e31630167f1"],
+Cell[2795, 75, 765, 14, 388, "Text",ExpressionUUID->"bced876a-7906-4efe-a3d3-bec9c7fcf70c"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3519, 93, 286, 5, 121, "Subsection",ExpressionUUID->"e1c59d74-8c5a-4899-a1a2-858b77adc5d9"],
-Cell[3808, 100, 611, 11, 182, "Text",ExpressionUUID->"e5d8fbf3-bcef-437f-ada7-a7703cf347e1"],
-Cell[4422, 113, 516, 11, 130, "Text",ExpressionUUID->"c66be706-d7da-4311-b5c9-23b48daeacb8"],
-Cell[4941, 126, 635, 12, 182, "Text",ExpressionUUID->"2b365d2d-e51a-42eb-8a0f-975157dccd61"]
+Cell[3597, 94, 286, 5, 121, "Subsection",ExpressionUUID->"e1c59d74-8c5a-4899-a1a2-858b77adc5d9"],
+Cell[3886, 101, 611, 11, 233, "Text",ExpressionUUID->"e5d8fbf3-bcef-437f-ada7-a7703cf347e1"],
+Cell[4500, 114, 553, 10, 182, "Text",ExpressionUUID->"c66be706-d7da-4311-b5c9-23b48daeacb8"],
+Cell[5056, 126, 658, 12, 285, "Text",ExpressionUUID->"2b365d2d-e51a-42eb-8a0f-975157dccd61"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5625, 144, 283, 5, 149, "Section",ExpressionUUID->"597ba132-c1c4-4118-8348-b98cab4469f6"],
-Cell[5911, 151, 523, 10, 182, "Text",ExpressionUUID->"8a251ec1-1555-47a0-b68a-6cb5a504caf7"],
-Cell[6437, 163, 1820, 42, 720, "Input",ExpressionUUID->"7712d703-a3c3-4e93-ae28-3a628b6203de"]
+Cell[5763, 144, 283, 5, 149, "Section",ExpressionUUID->"597ba132-c1c4-4118-8348-b98cab4469f6"],
+Cell[6049, 151, 523, 10, 285, "Text",ExpressionUUID->"8a251ec1-1555-47a0-b68a-6cb5a504caf7"],
+Cell[6575, 163, 1820, 42, 902, "Input",ExpressionUUID->"7712d703-a3c3-4e93-ae28-3a628b6203de"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8294, 210, 305, 5, 149, "Section",ExpressionUUID->"c397eeea-cab9-4995-a7b7-1371a5677130"],
+Cell[8432, 210, 305, 5, 149, "Section",ExpressionUUID->"c397eeea-cab9-4995-a7b7-1371a5677130"],
 Cell[CellGroupData[{
-Cell[8624, 219, 279, 5, 121, "Subsection",ExpressionUUID->"03c68d25-decc-4ee4-819f-e09b3ed78dc2"],
-Cell[8906, 226, 500, 10, 182, "Text",ExpressionUUID->"3719b270-605d-434a-a6f7-e2c49bbc5104"],
-Cell[9409, 238, 1390, 22, 440, "Text",ExpressionUUID->"ae2228c1-e7be-4210-b30f-b0e8c4d27dc8"],
-Cell[10802, 262, 1407, 25, 148, "Input",ExpressionUUID->"9dec35a7-c1b2-4170-9016-3c6c2ee4e4fe"],
-Cell[12212, 289, 454, 9, 130, "Text",ExpressionUUID->"b183bf70-4e10-4815-9ffa-7bfe2b31c67e"],
-Cell[12669, 300, 1513, 25, 543, "Text",ExpressionUUID->"fb834ef8-88c4-4732-9e5a-42bec23eff6d"],
-Cell[14185, 327, 1303, 23, 388, "Text",ExpressionUUID->"783c2be1-223d-44ae-8e2b-9bd34eb9fcf9"],
+Cell[8762, 219, 279, 5, 121, "Subsection",ExpressionUUID->"03c68d25-decc-4ee4-819f-e09b3ed78dc2"],
+Cell[9044, 226, 500, 10, 285, "Text",ExpressionUUID->"3719b270-605d-434a-a6f7-e2c49bbc5104"],
+Cell[9547, 238, 1441, 22, 698, "Text",ExpressionUUID->"ae2228c1-e7be-4210-b30f-b0e8c4d27dc8"],
+Cell[10991, 262, 1407, 25, 167, "Input",ExpressionUUID->"9dec35a7-c1b2-4170-9016-3c6c2ee4e4fe"],
+Cell[12401, 289, 454, 9, 182, "Text",ExpressionUUID->"b183bf70-4e10-4815-9ffa-7bfe2b31c67e"],
+Cell[12858, 300, 1539, 25, 853, "Text",ExpressionUUID->"fb834ef8-88c4-4732-9e5a-42bec23eff6d"],
+Cell[14400, 327, 1303, 23, 646, "Text",ExpressionUUID->"783c2be1-223d-44ae-8e2b-9bd34eb9fcf9"],
 Cell[CellGroupData[{
-Cell[15513, 354, 517, 9, 98, "Input",ExpressionUUID->"ab1c9c71-a96f-401c-97c2-c3b4ad7621f3"],
-Cell[16033, 365, 504, 9, 106, "Output",ExpressionUUID->"f2e918b0-dcc2-4567-8bb4-97a39707f25a"]
+Cell[15728, 354, 517, 9, 68, "Input",ExpressionUUID->"ab1c9c71-a96f-401c-97c2-c3b4ad7621f3"],
+Cell[16248, 365, 504, 9, 108, "Output",ExpressionUUID->"f2e918b0-dcc2-4567-8bb4-97a39707f25a"]
 }, Open  ]],
-Cell[16552, 377, 462, 9, 130, "Text",ExpressionUUID->"7c377ca7-4cac-4fb3-9071-b37495fa6304"],
+Cell[16767, 377, 462, 9, 182, "Text",ExpressionUUID->"7c377ca7-4cac-4fb3-9071-b37495fa6304"],
 Cell[CellGroupData[{
-Cell[17039, 390, 463, 9, 98, "Input",ExpressionUUID->"a2bc0e6b-d350-4841-a326-ccdd90d053d9"],
-Cell[17505, 401, 7667, 157, 175, "Output",ExpressionUUID->"2409fd65-5d99-4b06-a1b9-254a0ddf8d25"]
+Cell[17254, 390, 463, 9, 68, "Input",ExpressionUUID->"a2bc0e6b-d350-4841-a326-ccdd90d053d9"],
+Cell[17720, 401, 7667, 157, 155, "Output",ExpressionUUID->"2409fd65-5d99-4b06-a1b9-254a0ddf8d25"]
 }, Open  ]],
-Cell[25187, 561, 899, 20, 233, "Text",ExpressionUUID->"af2ad5ee-751a-415d-b4fb-5342e2815b6a"],
+Cell[25402, 561, 949, 20, 336, "Text",ExpressionUUID->"af2ad5ee-751a-415d-b4fb-5342e2815b6a"],
 Cell[CellGroupData[{
-Cell[26111, 585, 617, 16, 98, "Input",ExpressionUUID->"e5bdf7bc-1603-4013-8254-2fc29aa6fb2d"],
-Cell[26731, 603, 9006, 225, 106, "Output",ExpressionUUID->"53850a7b-dafb-4333-81f1-df4711e6f141"]
+Cell[26376, 585, 617, 16, 118, "Input",ExpressionUUID->"e5bdf7bc-1603-4013-8254-2fc29aa6fb2d"],
+Cell[26996, 603, 9006, 225, 158, "Output",ExpressionUUID->"53850a7b-dafb-4333-81f1-df4711e6f141"]
 }, Open  ]],
-Cell[35752, 831, 743, 13, 182, "Text",ExpressionUUID->"6f7918d2-651a-4d85-9303-6cf9bdc655e4"],
+Cell[36017, 831, 743, 13, 285, "Text",ExpressionUUID->"6f7918d2-651a-4d85-9303-6cf9bdc655e4"],
 Cell[CellGroupData[{
-Cell[36520, 848, 3754, 94, 689, "Input",ExpressionUUID->"1ffdc71a-ffca-497e-8397-4b822f5b646a"],
-Cell[40277, 944, 12229, 206, 506, "Output",ExpressionUUID->"70813bf8-da2a-43fe-b1a7-7a5f18f413ad"]
+Cell[36785, 848, 3754, 94, 950, "Input",ExpressionUUID->"1ffdc71a-ffca-497e-8397-4b822f5b646a"],
+Cell[40542, 944, 12229, 206, 508, "Output",ExpressionUUID->"70813bf8-da2a-43fe-b1a7-7a5f18f413ad"]
 }, Open  ]],
-Cell[52521, 1153, 713, 13, 233, "Text",ExpressionUUID->"924d27a3-0fb0-4a9a-b28b-ea895fa53bfe"],
-Cell[53237, 1168, 847, 15, 233, "Text",ExpressionUUID->"36129eb4-aded-4b1c-9307-0faf44ced94f"],
+Cell[52786, 1153, 756, 13, 336, "Text",ExpressionUUID->"924d27a3-0fb0-4a9a-b28b-ea895fa53bfe"],
+Cell[53545, 1168, 870, 15, 336, "Text",ExpressionUUID->"36129eb4-aded-4b1c-9307-0faf44ced94f"],
 Cell[CellGroupData[{
-Cell[54109, 1187, 482, 9, 98, "Input",ExpressionUUID->"6c37c93a-997f-4aa1-83b1-8b0430666a5b"],
-Cell[54594, 1198, 433, 7, 106, "Output",ExpressionUUID->"cc64fef9-7820-415c-a3bc-cc602e633632"]
+Cell[54440, 1187, 482, 9, 68, "Input",ExpressionUUID->"6c37c93a-997f-4aa1-83b1-8b0430666a5b"],
+Cell[54925, 1198, 433, 7, 108, "Output",ExpressionUUID->"cc64fef9-7820-415c-a3bc-cc602e633632"]
 }, Open  ]],
-Cell[55042, 1208, 792, 13, 182, "Text",ExpressionUUID->"54929eaf-6e7f-4f32-9b9c-6b3f440ed7a0"],
+Cell[55373, 1208, 792, 13, 285, "Text",ExpressionUUID->"54929eaf-6e7f-4f32-9b9c-6b3f440ed7a0"],
 Cell[CellGroupData[{
-Cell[55859, 1225, 402, 8, 98, "Input",ExpressionUUID->"00dec2db-6c04-4fc4-b57d-b88f154543b4"],
-Cell[56264, 1235, 31753, 679, 315, "Output",ExpressionUUID->"d239b91a-c984-4a55-b3cf-98ab690ebae7"]
+Cell[56190, 1225, 402, 8, 68, "Input",ExpressionUUID->"00dec2db-6c04-4fc4-b57d-b88f154543b4"],
+Cell[56595, 1235, 31753, 679, 265, "Output",ExpressionUUID->"d239b91a-c984-4a55-b3cf-98ab690ebae7"]
 }, Open  ]],
-Cell[88032, 1917, 1232, 22, 336, "Text",ExpressionUUID->"5369b97b-7776-4b00-ad6e-0ca4bfb6e69f"]
+Cell[88363, 1917, 1232, 22, 543, "Text",ExpressionUUID->"5369b97b-7776-4b00-ad6e-0ca4bfb6e69f"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[89301, 1944, 175, 3, 121, "Subsection",ExpressionUUID->"5d411505-4cc4-494d-b946-056bd0300c53"],
-Cell[89479, 1949, 426, 9, 182, "Text",ExpressionUUID->"1ff5a811-c3a4-4ee7-a8de-ba22d6a7f3f3"],
+Cell[89632, 1944, 175, 3, 121, "Subsection",ExpressionUUID->"5d411505-4cc4-494d-b946-056bd0300c53"],
+Cell[89810, 1949, 451, 9, 233, "Text",ExpressionUUID->"1ff5a811-c3a4-4ee7-a8de-ba22d6a7f3f3"],
 Cell[CellGroupData[{
-Cell[89930, 1962, 175, 3, 99, "Subsubsection",ExpressionUUID->"72f15a48-d63f-48d4-aeb7-a02931728c01"],
-Cell[90108, 1967, 419, 8, 130, "Text",ExpressionUUID->"03b8eb75-db94-4d97-a4e1-3eaaf61eb195"],
+Cell[90286, 1962, 175, 3, 99, "Subsubsection",ExpressionUUID->"72f15a48-d63f-48d4-aeb7-a02931728c01"],
+Cell[90464, 1967, 444, 8, 233, "Text",ExpressionUUID->"03b8eb75-db94-4d97-a4e1-3eaaf61eb195"],
 Cell[CellGroupData[{
-Cell[90552, 1979, 2540, 73, 540, "Input",ExpressionUUID->"8f194f81-aac4-4a1a-86a4-0d5f728209b7"],
-Cell[93095, 2054, 11676, 228, 1901, "Output",ExpressionUUID->"35c2666c-ff0a-4efb-992d-5a069d365339"]
+Cell[90933, 1979, 2540, 73, 706, "Input",ExpressionUUID->"8f194f81-aac4-4a1a-86a4-0d5f728209b7"],
+Cell[93476, 2054, 11689, 228, 2045, "Output",ExpressionUUID->"35c2666c-ff0a-4efb-992d-5a069d365339"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[104820, 2288, 165, 3, 99, "Subsubsection",ExpressionUUID->"707a48ca-56a7-4993-9d21-cdbe307099bf"],
-Cell[104988, 2293, 482, 9, 130, "Text",ExpressionUUID->"f87edd2b-5df4-4dd5-b098-a1fff116daea"],
+Cell[105214, 2288, 165, 3, 99, "Subsubsection",ExpressionUUID->"707a48ca-56a7-4993-9d21-cdbe307099bf"],
+Cell[105382, 2293, 500, 10, 182, "Text",ExpressionUUID->"f87edd2b-5df4-4dd5-b098-a1fff116daea"],
 Cell[CellGroupData[{
-Cell[105495, 2306, 7106, 167, 1324, "Input",ExpressionUUID->"62cc950c-2f5b-495b-9aa3-78eb6b994fd6"],
-Cell[112604, 2475, 11733, 230, 1953, "Output",ExpressionUUID->"daa0df3c-b288-41fc-a812-45eafd2d9461"]
+Cell[105907, 2307, 7106, 167, 2274, "Input",ExpressionUUID->"62cc950c-2f5b-495b-9aa3-78eb6b994fd6"],
+Cell[113016, 2476, 11761, 230, 2045, "Output",ExpressionUUID->"daa0df3c-b288-41fc-a812-45eafd2d9461"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[124386, 2711, 159, 3, 99, "Subsubsection",ExpressionUUID->"37e3e668-ba32-45b3-bc13-b5f3207764c8"],
-Cell[124548, 2716, 320, 7, 130, "Text",ExpressionUUID->"892bac25-ba0d-4b3c-b20d-0b4d994824e4"],
+Cell[124826, 2712, 159, 3, 99, "Subsubsection",ExpressionUUID->"37e3e668-ba32-45b3-bc13-b5f3207764c8"],
+Cell[124988, 2717, 388, 8, 182, "Text",ExpressionUUID->"892bac25-ba0d-4b3c-b20d-0b4d994824e4"],
 Cell[CellGroupData[{
-Cell[124893, 2727, 2413, 56, 393, "Input",ExpressionUUID->"8fac8ac1-b175-4b10-8c3b-12bf3127c785"],
-Cell[127309, 2785, 4908, 97, 638, "Output",ExpressionUUID->"9901e032-6bb8-4f30-81b7-025e1810b27c"]
+Cell[125401, 2729, 2413, 56, 510, "Input",ExpressionUUID->"8fac8ac1-b175-4b10-8c3b-12bf3127c785"],
+Cell[127817, 2787, 4921, 97, 854, "Output",ExpressionUUID->"9901e032-6bb8-4f30-81b7-025e1810b27c"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[132266, 2888, 170, 3, 99, "Subsubsection",ExpressionUUID->"4f448317-8d5f-43f2-8462-b113542a311a"],
-Cell[132439, 2893, 472, 9, 182, "Text",ExpressionUUID->"5e81d57c-42fb-4ca2-b54e-fbdbcaa264b5"],
+Cell[132787, 2890, 170, 3, 99, "Subsubsection",ExpressionUUID->"4f448317-8d5f-43f2-8462-b113542a311a"],
+Cell[132960, 2895, 528, 10, 233, "Text",ExpressionUUID->"5e81d57c-42fb-4ca2-b54e-fbdbcaa264b5"],
 Cell[CellGroupData[{
-Cell[132936, 2906, 7205, 115, 1324, "Input",ExpressionUUID->"ca506d84-d118-49b7-b28d-42e1a14604bb"],
-Cell[140144, 3023, 2248, 44, 373, "Output",ExpressionUUID->"deea40a4-8f9a-4f80-bbd6-848e36178cbd"]
+Cell[133513, 2909, 7205, 115, 1931, "Input",ExpressionUUID->"ca506d84-d118-49b7-b28d-42e1a14604bb"],
+Cell[140721, 3026, 2256, 44, 457, "Output",ExpressionUUID->"deea40a4-8f9a-4f80-bbd6-848e36178cbd"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[142429, 3072, 646, 16, 148, "Input",ExpressionUUID->"e9a4445a-6d9e-4640-bc2d-269ebf495c7e"],
-Cell[143078, 3090, 2159, 42, 1079, "Output",ExpressionUUID->"da94f300-832c-45e1-9750-3545b3f22394"]
+Cell[143014, 3075, 646, 16, 265, "Input",ExpressionUUID->"e9a4445a-6d9e-4640-bc2d-269ebf495c7e"],
+Cell[143663, 3093, 2163, 42, 309, "Output",ExpressionUUID->"da94f300-832c-45e1-9750-3545b3f22394"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
